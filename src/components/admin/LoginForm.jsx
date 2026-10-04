@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
-import { LoaderCircle, Lock } from "lucide-react";
+import { Eye, EyeOff, LoaderCircle, Lock } from "lucide-react";
 import { inputCls } from "@/components/admin/fields";
+import { cn } from "@/lib/utils";
 
 // Only return to admin pages after signing in (no open redirects).
 function safeNext(next) {
@@ -16,6 +17,7 @@ export default function LoginForm() {
   const next = safeNext(useSearchParams().get("next"));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   async function onSubmit(e) {
     e.preventDefault();
@@ -44,7 +46,27 @@ export default function LoginForm() {
         <label htmlFor="password" className="mb-1.5 block text-[13px] font-medium">
           Password
         </label>
-        <input id="password" name="password" type="password" autoComplete="current-password" required className={inputCls} />
+        <div className="relative">
+          <input
+            id="password"
+            name="password"
+            type={showPassword ? "text" : "password"}
+            autoComplete="current-password"
+            required
+            className={cn(inputCls, "pr-11")}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((v) => !v)}
+            aria-label={showPassword ? "Hide password" : "Show password"}
+            aria-pressed={showPassword}
+            aria-controls="password"
+            title={showPassword ? "Hide password" : "Show password"}
+            className="absolute inset-y-0 right-0 inline-flex w-11 items-center justify-center rounded-r-md text-muted transition-colors hover:text-text"
+          >
+            {showPassword ? <EyeOff className="size-4" strokeWidth={1.5} /> : <Eye className="size-4" strokeWidth={1.5} />}
+          </button>
+        </div>
       </div>
       {error && (
         <p role="alert" className="text-[13px] text-terracotta">
