@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.netlify
+.env
+.env.local
+.env.*
+!.env.example
+.vercel
+*.tsbuildinfo
+next-env.d.ts
