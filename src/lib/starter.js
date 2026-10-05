@@ -34,6 +34,8 @@ function starterDocs() {
       introText: d.introText,
       quote: d.quote,
       bestTime: d.bestTime,
+      whenToTravel: d.whenToTravel,
+      places: d.places ?? [],
       experiences: d.experiences,
       order: i,
       published: true,

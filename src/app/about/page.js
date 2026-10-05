@@ -1,16 +1,40 @@
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
 import Landscape from "@/components/ui/Landscape";
+import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import { ArrowLink } from "@/components/ui/Button";
 import { Reveal, Stagger, StaggerItem } from "@/lib/motion";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Our story",
+  title: "About Painite",
   description: "Painite is a private travel company based in Agra, India, specialising in five destinations across South Asia and the Indian Ocean.",
   path: "/about",
 });
+
+const more = [
+  {
+    href: "/our-story",
+    title: "Our story",
+    text: "Born in Agra, in the shadow of the Taj Mahal: how our founder went from front office to a life in luxury travel.",
+  },
+  {
+    href: "/our-expertise",
+    title: "Our expertise",
+    text: "Five destinations only, so our knowledge runs deep. We know the hotels, guides and logistics first-hand.",
+  },
+  {
+    href: "/heart-of-our-business",
+    title: "Our philosophy",
+    text: "Luxury, to us, is care, access, attention and trust, not simply expensive hotels.",
+  },
+  {
+    href: "/our-booking-promise",
+    title: "Our booking promise",
+    text: "No full prepayment before arrival, seamless check-in and departure, and fair cancellation terms.",
+  },
+];
 
 const steps = [
   { n: "01", title: "A conversation", text: "We start with you: what you love, how you like to travel, and what you hope to remember." },
@@ -67,6 +91,29 @@ export default function AboutPage() {
                 <p className="eyebrow text-terracotta">{s.n}</p>
                 <h3 className="mt-3 font-serif text-[1.6rem] leading-tight">{s.title}</h3>
                 <p className="mt-3 text-[13px] leading-relaxed text-muted">{s.text}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="bg-cream-soft text-text">
+        <div className="container-luxe py-24">
+          <p className="eyebrow text-terracotta">More about Painite</p>
+          <Reveal as="h2" className="display-lg mt-4 max-w-xl">
+            Travel is personal. So is the way we plan it.
+          </Reveal>
+          <Stagger className="mt-14 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">
+            {more.map((m, i) => (
+              <StaggerItem key={m.href}>
+                <Link href={m.href} className="group block border-t border-line py-6">
+                  <p className="eyebrow text-terracotta">{String(i + 1).padStart(2, "0")}</p>
+                  <h3 className="mt-3 font-serif text-[1.6rem] leading-tight transition-colors group-hover:text-terracotta">
+                    {m.title}
+                  </h3>
+                  <p className="mt-3 text-[13px] leading-relaxed text-muted">{m.text}</p>
+                  <span className="mt-4 inline-block border-b border-text/40 pb-1 text-[12.5px]">Read more</span>
+                </Link>
               </StaggerItem>
             ))}
           </Stagger>

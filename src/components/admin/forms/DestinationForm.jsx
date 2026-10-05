@@ -1,7 +1,7 @@
 "use client";
 
 import EditorFrame from "@/components/admin/EditorFrame";
-import { CheckboxGroup, ImagePicker, Repeater, Section, TextArea, TextInput, Toggle } from "@/components/admin/fields";
+import { CheckboxGroup, GalleryField, ImagePicker, Repeater, Section, StringList, TextArea, TextInput, Toggle, VideoPicker } from "@/components/admin/fields";
 import { useResourceForm } from "@/components/admin/useResourceForm";
 
 export default function DestinationForm({ id, initial, experienceOptions }) {
@@ -43,6 +43,14 @@ export default function DestinationForm({ id, initial, experienceOptions }) {
             <TextInput label="Pull quote" value={v.quote} onChange={(x) => set("quote", x)} />
           </Section>
 
+          <Section title="When to travel" description="Shown with the best time to visit on the destination page.">
+            <TextArea label="Text" rows={3} value={v.whenToTravel} onChange={(x) => set("whenToTravel", x)} />
+          </Section>
+
+          <Section title="Places we take you" description="The cities and areas listed under “Across” on the destination page.">
+            <StringList label="Places" items={v.places} onChange={(x) => set("places", x)} placeholder="Jaipur" addLabel="Add a place" />
+          </Section>
+
           <Section title="Regions" description="The four illustrated regions on the destination page.">
             <Repeater
               items={v.regions}
@@ -62,6 +70,9 @@ export default function DestinationForm({ id, initial, experienceOptions }) {
               )}
             />
           </Section>
+          <Section title="Gallery" description="Photos and videos shown in a gallery on the destination page. Upload several at once, add captions and put them in order with the arrows.">
+            <GalleryField items={v.gallery} onChange={(x) => set("gallery", x)} />
+          </Section>
         </div>
 
         <aside className="space-y-6">
@@ -72,7 +83,7 @@ export default function DestinationForm({ id, initial, experienceOptions }) {
           <Section title="Signature experiences">
             <CheckboxGroup options={experienceOptions} value={v.experiences} onChange={(x) => set("experiences", x)} />
           </Section>
-          <Section title="Images">
+          <Section title="Images and video">
             <ImagePicker label="Page hero" value={v.scene} onChange={(x) => set("scene", x)} />
             <ImagePicker label="Card" value={v.cardScene} onChange={(x) => set("cardScene", x)} />
             <ImagePicker
@@ -81,6 +92,13 @@ export default function DestinationForm({ id, initial, experienceOptions }) {
               noneLabel="Same as page"
               value={v.homeScene}
               onChange={(x) => set("homeScene", x)}
+            />
+            <VideoPicker
+              label="Hero video"
+              value={v.video}
+              onChange={(x) => set("video", x)}
+              emptyText="No uploaded video. The home page carousel plays the site's built-in video for this destination, if it has one."
+              hint="Plays in the home page carousel and at the top of the destination page."
             />
           </Section>
         </aside>

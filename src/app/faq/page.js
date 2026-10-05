@@ -1,6 +1,7 @@
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
 import Faq from "@/components/sections/Faq";
+import JsonLd from "@/components/ui/JsonLd";
 import { faqs } from "@/data/faq";
 import { buildMetadata } from "@/lib/seo";
 
@@ -23,6 +24,13 @@ export default function FaqPage() {
         </div>
       </section>
       <CtaBand />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
     </>
   );
 }

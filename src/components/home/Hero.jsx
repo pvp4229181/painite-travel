@@ -6,8 +6,16 @@ import { ArrowDown, ArrowUpRight, Pause, Play } from "lucide-react";
 import Landscape from "@/components/ui/Landscape";
 import { Button } from "@/components/ui/Button";
 import { destinations as starterDestinations } from "@/data/destinations";
+import { videoSrc } from "@/lib/media";
 
 const countryOrder = ["india", "nepal", "bhutan", "sri-lanka", "maldives"];
+
+// A video uploaded in the admin wins; otherwise the built-in file in /public/videos/hero, if any.
+function heroVideo(destination) {
+  if (destination.video) return videoSrc(destination.video);
+  if (!countryOrder.includes(destination.slug)) return null;
+  return `/videos/hero/${destination.slug}.mp4${destination.slug === "india" ? "?v=2" : ""}`;
+}
 
 export default function Hero({ destinations: suppliedDestinations = starterDestinations }) {
   const destinations = countryOrder.map(slug => suppliedDestinations.find(item => item.slug === slug)).filter(Boolean);
@@ -16,10 +24,10 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
   const [paused, setPaused] = useState(false);
   const photoStrip = useRef(null);
   const previousActive = useRef(null);
-  const heroVideo = useRef(null);
+  const heroVideoRef = useRef(null);
 
   useEffect(() => {
-    const video = heroVideo.current;
+    const video = heroVideoRef.current;
     if (!video) return;
     if (paused || reducedMotion) video.pause();
     else video.play().catch(() => {});
@@ -67,9 +75,9 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
         transition={{ duration: reducedMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}>
 
         <Landscape scene={destination.homeScene || destination.scene} priority />
-        {!reducedMotion && <video
-          ref={heroVideo}
-          src={`/videos/hero/${destination.slug}.mp4${destination.slug === "india" ? "?v=2" : ""}`}
+        {!reducedMotion && heroVideo(destination) && <video
+          ref={heroVideoRef}
+          src={heroVideo(destination)}
           autoPlay
           muted
           loop
@@ -85,13 +93,13 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
       <div className="hero-stage relative flex flex-1 items-center pt-28 pb-12">
         <div className="container-luxe w-full">
           <div className="hero-copy">
-            <p className="hero-eyebrow"><span className="h-px w-9 bg-gold-soft" /> PRIVATE JOURNEYS. EXTRAORDINARY PLACES.</p>
+            <h1 className="hero-eyebrow uppercase"><span className="h-px w-9 shrink-0 bg-gold-soft" /> Bespoke journeys across South Asia &amp; the Indian Ocean</h1>
             <p className="hero-pretitle font-serif italic">Somewhere extraordinary.</p>
             <div className="hero-title relative overflow-hidden font-serif leading-none tracking-[-.04em]">
               <AnimatePresence initial={false}>
-                <motion.h1 key={destination.slug} className="absolute inset-0"
+                <motion.p key={destination.slug} className="absolute inset-0"
                   initial={{ y: "100%" }} animate={{ y: "0%" }} exit={{ y: "-100%" }}
-                  transition={{ duration: reducedMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}>{destination.name}</motion.h1>
+                  transition={{ duration: reducedMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}>{destination.name}</motion.p>
               </AnimatePresence>
             </div>
             <motion.p key={`line-${destination.slug}`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reducedMotion ? 0 : 0.5, delay: reducedMotion ? 0 : 0.2 }} className="mt-4 max-w-[360px] text-base leading-relaxed text-ivory/85">{destination.homeLine}</motion.p>

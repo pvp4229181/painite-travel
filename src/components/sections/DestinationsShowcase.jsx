@@ -47,7 +47,7 @@ export default async function DestinationsShowcase({ title, intro, className }) 
         </Stagger>
         <div className="mt-10 flex flex-col justify-between gap-4 border-t border-ivory/20 pt-6 sm:flex-row sm:items-center">
           <p className="max-w-lg text-sm leading-relaxed text-ivory/80">From Himalayan valleys to the Indian Ocean, combine our destinations in one privately planned journey.</p>
-          <Link href="/journeys?destination=multiple" className="shrink-0 border-b border-gold pb-2 text-sm text-gold">Explore multi-country journeys</Link>
+          <Link href="/journeys/multi-country" className="shrink-0 border-b border-gold pb-2 text-sm text-gold">Explore multi-country journeys</Link>
         </div>
       </div>
     </section>

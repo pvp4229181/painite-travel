@@ -1,7 +1,7 @@
 "use client";
 
 import EditorFrame from "@/components/admin/EditorFrame";
-import { ImagePicker, Section, TextArea, TextInput, Toggle } from "@/components/admin/fields";
+import { GalleryField, ImagePicker, Section, TextArea, TextInput, Toggle } from "@/components/admin/fields";
 import { useResourceForm } from "@/components/admin/useResourceForm";
 
 export default function ArticleForm({ id, initial }) {
@@ -43,6 +43,9 @@ export default function ArticleForm({ id, initial }) {
               onChange={(x) => set("body", x)}
               hint="Separate paragraphs with a blank line."
             />
+          </Section>
+          <Section title="Gallery" description="Photos and videos shown after the article text. Upload several at once, add captions and put them in order with the arrows.">
+            <GalleryField items={v.gallery} onChange={(x) => set("gallery", x)} />
           </Section>
         </div>
         <aside className="space-y-6">

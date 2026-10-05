@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const travelStyles = ["Not sure yet", "Culture and heritage", "Nature and wildlife", "Wellness and slow travel", "Celebration or honeymoon", "Family journey", "Adventure"];
 
 const fieldCls =
-  "w-full border border-[#cbbfa9] bg-cream-soft px-4 py-3 text-[14px] text-text outline-none transition-colors placeholder:text-muted/50 focus:border-terracotta";
+  "enquiry-input w-full border border-line bg-cream px-4 py-3 text-[14px] text-text outline-none transition-colors placeholder:text-muted/50 focus:border-terracotta";
 const labelCls = "mb-2 block text-[12.5px] text-muted";
 
 function Field({ label, id, error, className, children }) {
@@ -22,7 +22,7 @@ function Field({ label, id, error, className, children }) {
       </label>
       {children}
       {error && (
-        <p className="mt-1.5 text-[12px] text-terracotta" role="alert">
+        <p id={`${id}-error`} className="mt-1.5 text-[12px] text-terracotta" role="alert">
           {error}
         </p>
       )}
@@ -33,13 +33,16 @@ function Field({ label, id, error, className, children }) {
 export default function EnquiryForm({
   defaultDestination = "",
   defaultJourney = "",
+  defaultExperience = "",
   destinations = starterDestinations,
   experiences = starterExperiences,
 }) {
-  const [interests, setInterests] = useState([]);
+  const [interests, setInterests] = useState(() => defaultExperience ? [defaultExperience] : []);
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   const toggle = (slug) => setInterests((cur) => (cur.includes(slug) ? cur.filter((s) => s !== slug) : [...cur, slug]));
 
@@ -48,12 +51,17 @@ export default function EnquiryForm({
     const form = new FormData(e.currentTarget);
     const payload = Object.fromEntries(form.entries());
     payload.interests = interests;
+    payload.dates = [startDate, endDate].filter(Boolean).join(" to ");
 
     const nextErrors = {};
     if (!payload.name?.trim()) nextErrors.name = "Please tell us your name.";
     if (!/^\S+@\S+\.\S+$/.test(payload.email || "")) nextErrors.email = "Please enter a valid email address.";
+    if (startDate && endDate && endDate < startDate) nextErrors.endDate = "Please choose an end date on or after your start date.";
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length) return;
+    if (Object.keys(nextErrors).length) {
+      e.currentTarget.elements.namedItem(Object.keys(nextErrors)[0])?.focus();
+      return;
+    }
 
     setStatus("sending");
     try {
@@ -83,25 +91,27 @@ export default function EnquiryForm({
           </p>
         </motion.div>
       ) : (
-        <motion.form key="form" onSubmit={onSubmit} noValidate className="space-y-5" exit={{ opacity: 0 }}>
+        <motion.form key="form" onSubmit={onSubmit} noValidate className="enquiry-form" exit={{ opacity: 0 }}>
           {/* Honeypot: hidden from people, tempting to bots. */}
           <input type="text" name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
           {defaultJourney && <input type="hidden" name="journey" value={defaultJourney} />}
 
-          <Field label="Full name" id="name" error={errors.name}>
-            <input id="name" name="name" autoComplete="name" className={fieldCls} aria-invalid={!!errors.name} />
+          <fieldset className="enquiry-field-group"><legend className="enquiry-group-title"><span>01</span> Your details</legend><p className="enquiry-group-hint">Let us know how to reach you. * Required</p><div className="enquiry-fields">
+          <Field label="Full name *" id="name" error={errors.name}>
+            <input id="name" name="name" autoComplete="name" placeholder="Your full name" required className={fieldCls} aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-error" : undefined} />
           </Field>
 
           <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Email address" id="email" error={errors.email}>
-              <input id="email" name="email" type="email" autoComplete="email" className={fieldCls} aria-invalid={!!errors.email} />
+            <Field label="Email address *" id="email" error={errors.email}>
+              <input id="email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required className={fieldCls} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} />
             </Field>
             <Field label="Phone number (optional)" id="phone">
-              <input id="phone" name="phone" type="tel" autoComplete="tel" className={fieldCls} />
+              <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="Include country code" className={fieldCls} />
             </Field>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          </div></fieldset><fieldset className="enquiry-field-group"><legend className="enquiry-group-title"><span>02</span> Your journey</legend><p className="enquiry-group-hint">Still exploring? Leave these details open.</p><div className="enquiry-fields">
+          <div>
             <Field label="Destination" id="destination">
               <select id="destination" name="destination" defaultValue={defaultDestination} className={cn(fieldCls, "appearance-auto")}>
                 <option value="">Not sure yet</option>
@@ -113,10 +123,23 @@ export default function EnquiryForm({
                 <option value="multiple">More than one</option>
               </select>
             </Field>
-            <Field label="Preferred travel dates" id="dates">
-              <input id="dates" name="dates" placeholder="e.g. late March, 2 weeks" className={fieldCls} />
-            </Field>
           </div>
+
+          <fieldset>
+            <legend className={labelCls}>Preferred travel dates (optional)</legend>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <Field label="Vacation start" id="startDate">
+                <input id="startDate" name="startDate" type="date" value={startDate} onChange={event => {
+                  const value = event.target.value;
+                  setStartDate(value);
+                  if (endDate && value && endDate < value) setEndDate("");
+                }} className={fieldCls} />
+              </Field>
+              <Field label="Vacation end" id="endDate" error={errors.endDate}>
+                <input id="endDate" name="endDate" type="date" min={startDate || undefined} value={endDate} onChange={event => setEndDate(event.target.value)} aria-invalid={!!errors.endDate} aria-describedby={errors.endDate ? "endDate-error" : undefined} className={fieldCls} />
+              </Field>
+            </div>
+          </fieldset>
 
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Number of travellers" id="travellers">
@@ -131,8 +154,10 @@ export default function EnquiryForm({
             </Field>
           </div>
 
+          </div></fieldset>
+          <fieldset className="enquiry-field-group"><legend className="enquiry-group-title"><span>03</span> Make it personal</legend><p className="enquiry-group-hint">Choose the experiences you love.</p><div className="enquiry-fields">
           <fieldset>
-            <legend className={labelCls}>What draws you? Choose any.</legend>
+            <legend className="sr-only">What draws you? Choose any.</legend>
             <div className="flex flex-wrap gap-2">
               {experiences.map((x) => {
                 const on = interests.includes(x.slug);
@@ -140,8 +165,8 @@ export default function EnquiryForm({
                   <label
                     key={x.slug}
                     className={cn(
-                      "inline-flex cursor-pointer items-center gap-2.5 rounded-full border px-3.5 py-2 text-[12.5px] transition-colors",
-                      on ? "border-terracotta bg-terracotta/10 text-text" : "border-[#cbbfa9] bg-cream-soft text-text hover:border-text/50",
+                      "inline-flex min-h-11 cursor-pointer items-center gap-2.5 rounded-full border px-3.5 py-2 text-[12.5px] transition-colors",
+                      on ? "border-terracotta bg-terracotta/10 text-text" : "border-line bg-cream text-text hover:border-text/50",
                     )}
                   >
                     <input type="checkbox" checked={on} onChange={() => toggle(x.slug)} className="size-3.5 accent-terracotta" />
@@ -153,9 +178,10 @@ export default function EnquiryForm({
           </fieldset>
 
           <Field label="Tell us about your journey" id="message">
-            <textarea id="message" name="message" rows={5} className={cn(fieldCls, "resize-y")} />
+            <textarea id="message" name="message" rows={4} placeholder="A special occasion, a favourite place, or something you have always wanted to do..." className={cn(fieldCls, "resize-y")} />
           </Field>
 
+          </div></fieldset>
           {status === "error" && (
             <p className="text-[13px] text-terracotta" role="alert">
               {message}
@@ -165,7 +191,7 @@ export default function EnquiryForm({
           <button
             type="submit"
             disabled={status === "sending"}
-            className="group mt-4 inline-flex items-center gap-3 bg-ink px-7 py-4 text-[13px] tracking-wide text-ivory transition-colors hover:bg-ink-soft disabled:opacity-60"
+            className="enquiry-submit group mt-4 inline-flex w-full items-center justify-between gap-3 bg-ink px-7 py-4 text-[13px] tracking-wide text-ivory transition-colors hover:bg-ink-soft disabled:opacity-60"
           >
             {status === "sending" ? "Sending" : "Send enquiry"}
             {status === "sending" ? (
@@ -174,6 +200,7 @@ export default function EnquiryForm({
               <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             )}
           </button>
+          <p className="enquiry-privacy">We use your details to respond to your enquiry. <a href="/privacy">Privacy policy</a></p>
         </motion.form>
       )}
     </AnimatePresence>

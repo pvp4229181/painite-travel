@@ -1,5 +1,8 @@
 // Maps a "scene" key stored on content to an artwork file in /public/images/ai.
 // Older keys (desert, lagoon, ...) are kept as aliases so existing content keeps working.
+// A scene can also be the URL of an image uploaded through the admin, used as is.
+import { isUploadedMedia } from "./media.js";
+
 export const sceneImages = {
   hero: "hero",
   himalaya: "himalaya",
@@ -32,13 +35,16 @@ export const imageOptions = [
 ];
 
 export function imageFor(scene) {
+  if (isUploadedMedia(scene)) return scene;
   return sceneImages[scene] || "hero";
 }
 
 export function imageSrc(scene) {
+  if (isUploadedMedia(scene)) return scene;
   return `/images/ai/${imageFor(scene)}.webp`;
 }
 
 export function normalizeScene(scene) {
+  if (isUploadedMedia(scene)) return scene;
   return sceneImages[scene] ? imageFor(scene) : "hero";
 }

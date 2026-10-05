@@ -1,10 +1,10 @@
 "use client";
 
 import { useId } from "react";
-import Image from "next/image";
 import { ArrowDown, ArrowUp, Check, Plus, Trash2 } from "lucide-react";
-import { imageOptions, imageFor, imageSrc } from "@/lib/scenes";
 import { cn } from "@/lib/utils";
+
+export { GalleryField, ImagePicker, VideoPicker } from "@/components/admin/MediaFields";
 
 export const inputCls =
   "w-full rounded-md border border-line bg-white px-3 py-2.5 text-[14px] text-text outline-none transition-colors placeholder:text-muted/50 focus:border-ink focus:ring-2 focus:ring-gold/30 aria-[invalid=true]:border-terracotta";
@@ -151,52 +151,6 @@ export function CheckboxGroup({ label, hint, options, value = [], onChange }) {
               {on && <Check className="size-3.5" strokeWidth={2} />}
               {o.label}
             </label>
-          );
-        })}
-      </div>
-      {hint && <p className="mt-2 text-[12.5px] text-muted">{hint}</p>}
-    </fieldset>
-  );
-}
-
-/** Choose one of the site's artwork images. `allowNone` adds a "default" choice. */
-export function ImagePicker({ label, hint, value, onChange, allowNone, noneLabel = "Default", compact }) {
-  const selected = value ? imageFor(value) : "";
-  const choices = allowNone ? [{ key: "", label: noneLabel }, ...imageOptions] : imageOptions;
-  return (
-    <fieldset>
-      {label && <legend className="mb-2 text-[13px] font-medium">{label}</legend>}
-      <div className={cn("grid gap-2", compact ? "grid-cols-4 sm:grid-cols-8" : "grid-cols-3 sm:grid-cols-4")}>
-        {choices.map((o) => {
-          const on = selected === o.key;
-          return (
-            <button
-              key={o.key || "none"}
-              type="button"
-              onClick={() => onChange(o.key)}
-              aria-pressed={on}
-              title={o.label}
-              className={cn(
-                "group relative aspect-[4/3] overflow-hidden rounded-md border-2 text-left transition-all",
-                on ? "border-ink ring-2 ring-gold/50" : "border-transparent opacity-80 hover:opacity-100",
-              )}
-            >
-              {o.key ? (
-                <Image src={imageSrc(o.key)} alt="" fill sizes="160px" className="object-cover" />
-              ) : (
-                <span className="absolute inset-0 bg-sand" />
-              )}
-              {!compact && (
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-2 pt-4 pb-1.5 text-[11px] text-white">
-                  {o.label}
-                </span>
-              )}
-              {on && (
-                <span className="absolute top-1.5 right-1.5 inline-flex size-5 items-center justify-center rounded-full bg-ink text-ivory">
-                  <Check className="size-3" strokeWidth={2.5} />
-                </span>
-              )}
-            </button>
           );
         })}
       </div>

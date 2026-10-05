@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import GalleryItemSchema from "./GalleryItem.js";
 
 const DestinationSchema = new mongoose.Schema(
   {
@@ -10,10 +11,14 @@ const DestinationSchema = new mongoose.Schema(
     scene: String,
     cardScene: String,
     homeScene: String,
+    video: String,
+    gallery: [GalleryItemSchema],
     introTitle: String,
     introText: String,
     quote: String,
     bestTime: String,
+    whenToTravel: String,
+    places: [String],
     experiences: [{ type: String, lowercase: true }],
     order: { type: Number, default: 0 },
     published: { type: Boolean, default: true },

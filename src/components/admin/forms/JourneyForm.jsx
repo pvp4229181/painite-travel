@@ -1,7 +1,7 @@
 "use client";
 
 import EditorFrame from "@/components/admin/EditorFrame";
-import { CheckboxGroup, ImagePicker, Repeater, Section, TextArea, TextInput, Toggle } from "@/components/admin/fields";
+import { CheckboxGroup, GalleryField, ImagePicker, Repeater, Section, TextArea, TextInput, Toggle, VideoPicker } from "@/components/admin/fields";
 import { useResourceForm } from "@/components/admin/useResourceForm";
 
 export default function JourneyForm({ id, initial, destinationOptions }) {
@@ -80,6 +80,9 @@ export default function JourneyForm({ id, initial, destinationOptions }) {
               )}
             />
           </Section>
+          <Section title="Gallery" description="Photos and videos shown in a gallery on the journey page. Upload several at once, add captions and put them in order with the arrows.">
+            <GalleryField items={v.gallery} onChange={(x) => set("gallery", x)} />
+          </Section>
         </div>
 
         <aside className="space-y-6">
@@ -96,8 +99,14 @@ export default function JourneyForm({ id, initial, destinationOptions }) {
               hint="The journey is listed on each chosen destination's page."
             />
           </Section>
-          <Section title="Image">
+          <Section title="Image and video">
             <ImagePicker value={v.scene} onChange={(x) => set("scene", x)} />
+            <VideoPicker
+              label="Hero video"
+              value={v.video}
+              onChange={(x) => set("video", x)}
+              hint="Plays behind the title at the top of the journey page. Optional."
+            />
           </Section>
         </aside>
       </div>

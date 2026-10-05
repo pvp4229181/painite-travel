@@ -114,7 +114,7 @@ export const journeys = [
     ],
   },
   {
-    slug: "golden-triangle",
+    slug: "india-golden-triangle",
     title: "India's Golden Triangle, Privately Designed",
     region: "India",
     destinations: ["india"],
@@ -143,7 +143,7 @@ export const journeys = [
     ],
   },
   {
-    slug: "rajasthan-in-depth",
+    slug: "rajasthan-luxury",
     title: "The Essence of Rajasthan",
     region: "India",
     destinations: ["india"],
@@ -171,7 +171,7 @@ export const journeys = [
     ],
   },
   {
-    slug: "sri-lanka-revealed",
+    slug: "sri-lanka-in-style",
     title: "Sri Lanka in Style",
     region: "Sri Lanka",
     destinations: ["sri-lanka"],
@@ -277,7 +277,7 @@ export const journeys = [
     ],
   },
   {
-    slug: "maldives-private-island",
+    slug: "maldives-private-escape",
     title: "Maldives Private Escape",
     region: "Maldives",
     destinations: ["maldives"],

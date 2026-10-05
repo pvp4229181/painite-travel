@@ -7,7 +7,8 @@ export function absoluteUrl(path = "/") {
 export function buildMetadata({ title, description = site.description, path = "/", type = "website" } = {}) {
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.tagline}`;
   return {
-    title: fullTitle,
+    // absolute: the root layout's title template would otherwise append the site name a second time
+    title: { absolute: fullTitle },
     description,
     alternates: { canonical: path },
     openGraph: {
@@ -33,6 +34,8 @@ export function organizationJsonLd() {
     telephone: site.phone,
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.streetAddress,
+      postalCode: site.postalCode,
       addressLocality: "Agra",
       addressRegion: "Uttar Pradesh",
       addressCountry: "IN",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Landscape from "@/components/ui/Landscape";
 import { CircleArrow } from "@/components/ui/Button";
+import { durationLabel } from "@/data/journeys";
 import { getJourneys } from "@/lib/content";
 import { Reveal, Stagger, StaggerItem } from "@/lib/motion";
 
@@ -35,7 +36,7 @@ export default async function JourneysPreview() {
               <div className="absolute inset-x-6 bottom-6 flex items-end justify-between gap-4 md:inset-x-6 md:bottom-7">
                 <div>
                   <p className="eyebrow text-ivory/85">
-                    {featured.region}, {featured.days} days
+                    {featured.region} · {durationLabel(featured)}
                   </p>
                   <h3 className="mt-2 font-serif text-[2rem] leading-none md:text-[2.4rem]">{featured.title}</h3>
                   <p className="mt-3 text-[13px] text-ivory/85">{featured.summary}</p>
@@ -56,7 +57,7 @@ export default async function JourneysPreview() {
                   </div>
                   <div>
                     <p className="eyebrow text-muted">
-                      {j.region}, {j.days} days
+                      {j.region} · {durationLabel(j)}
                     </p>
                     <h3 className="mt-1.5 font-serif text-[1.55rem] leading-tight transition-colors group-hover:text-terracotta">
                       {j.title}

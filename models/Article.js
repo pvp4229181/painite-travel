@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import GalleryItemSchema from "./GalleryItem.js";
 
 // A journal article. `body` is stored as an array of paragraphs.
 const ArticleSchema = new mongoose.Schema(
@@ -9,6 +10,7 @@ const ArticleSchema = new mongoose.Schema(
     date: { type: String, required: true }, // YYYY-MM-DD
     readTime: String,
     scene: String,
+    gallery: [GalleryItemSchema],
     excerpt: String,
     body: [String],
     published: { type: Boolean, default: true },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 import { getDestinations, getExperiences } from "@/lib/content";
+import { serviceDetails } from "@/data/services";
 import { footerNav, site } from "@/data/site";
 
 function Column({ title, children }) {
@@ -33,6 +34,11 @@ export default async function Footer() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link href="/journeys/multi-country" className={linkCls}>
+              Multi-country journeys
+            </Link>
+          </li>
         </Column>
 
         <Column title="Experiences">
@@ -40,11 +46,13 @@ export default async function Footer() {
         </Column>
 
         <Column title="Services">
-          <li><Link href="/services#bespoke-itineraries" className={linkCls}>Bespoke travel</Link></li>
-          <li><Link href="/services#luxury-hotels" className={linkCls}>Luxury hotels</Link></li>
-          <li><Link href="/services#private-guides" className={linkCls}>Private guides</Link></li>
-          <li><Link href="/services#airport-assistance" className={linkCls}>Airport assistance</Link></li>
-          <li><Link href="/services#wellness-retreats" className={linkCls}>Yoga & retreats</Link></li>
+          {serviceDetails.map((s) => (
+            <li key={s.slug}>
+              <Link href={`/services/${s.slug}`} className={linkCls}>
+                {s.navLabel}
+              </Link>
+            </li>
+          ))}
         </Column>
 
         <Column title="Painite">
@@ -73,11 +81,22 @@ export default async function Footer() {
       </div>
 
       <div className="container-luxe">
+        <div className="border-t border-ivory/10 py-8">
+          <h2 className="eyebrow text-ivory/60">Affiliations &amp; recognitions</h2>
+          <ul className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+            {footerNav.affiliations.map((a) => (
+              <li key={a.short} className="flex items-baseline gap-3">
+                <span className="font-serif text-xl text-gold">{a.short}</span>
+                <span className="text-[12px] leading-snug text-ivory/70">{a.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="flex flex-col gap-4 border-t border-ivory/10 py-7 text-[12px] text-ivory/65 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {site.year} {site.legalName}
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
             {footerNav.legal.map((l) => (
               <Link key={l.href} href={l.href} className={linkCls}>
                 {l.label}

@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    slug: "heritage",
+    slug: "culture",
     name: "Culture & Heritage",
     line: "Living history, beyond the guidebooks.",
     scene: "desert",
@@ -41,7 +41,7 @@ export const experiences = [
     moments: ["Old Delhi food walks at dusk", "A Rajasthani royal kitchen", "Spice gardens of Kerala"],
   },
   {
-    slug: "romance",
+    slug: "romantic",
     name: "Romantic Journeys",
     line: "Journeys for two, and what comes next.",
     scene: "night",

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import GalleryItemSchema from "./GalleryItem.js";
 
 const DaySchema = new mongoose.Schema(
   {
@@ -20,6 +21,8 @@ const TourSchema = new mongoose.Schema(
     days: { type: Number, required: true, min: 1 },
     nights: { type: Number, required: true, min: 0 },
     scene: String,
+    video: String,
+    gallery: [GalleryItemSchema],
     featured: { type: Boolean, default: false },
     order: { type: Number, default: 0 },
     summary: String,

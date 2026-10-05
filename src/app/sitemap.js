@@ -1,4 +1,5 @@
 import { getArticles, getDestinations, getExperiences, getJourneys } from "@/lib/content";
+import { serviceDetails } from "@/data/services";
 import { absoluteUrl } from "@/lib/seo";
 
 export default async function sitemap() {
@@ -20,15 +21,21 @@ export default async function sitemap() {
     page("/", 1, "weekly"),
     page("/destinations", 0.9),
     page("/journeys", 0.9),
+    page("/journeys/multi-country", 0.8),
     page("/experiences", 0.8),
     page("/services", 0.8),
     page("/plan-your-journey", 0.9),
     page("/about", 0.6),
+    page("/our-story", 0.6),
+    page("/our-expertise", 0.6),
+    page("/heart-of-our-business", 0.5),
+    page("/our-booking-promise", 0.5),
     page("/responsible-travel", 0.5),
     page("/faq", 0.5),
     page("/journal", 0.7, "weekly"),
     page("/privacy", 0.2, "yearly"),
     page("/terms", 0.2, "yearly"),
+    ...serviceDetails.map((s) => page(`/services/${s.slug}`, 0.7)),
     ...destinations.map((d) => page(`/destinations/${d.slug}`, 0.9)),
     ...journeys.map((j) => page(`/journeys/${j.slug}`, 0.8)),
     ...experiences.map((e) => page(`/experiences/${e.slug}`, 0.6)),

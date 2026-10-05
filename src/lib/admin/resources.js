@@ -8,6 +8,7 @@ import Region from "@models/Region";
 import Service from "@models/Service";
 import Tour from "@models/Tour";
 import { toPlain } from "@/lib/content";
+import { isUploadedMedia, mediaType } from "@/lib/media";
 import { normalizeScene } from "@/lib/scenes";
 import { slugify } from "@/lib/starter";
 
@@ -28,7 +29,17 @@ const int = (v, min, max) => {
 };
 const list = (v) => (Array.isArray(v) ? v : []);
 const strList = (v, max = 300) => list(v).map((s) => str(s, max)).filter(Boolean);
-const scene = (v) => normalizeScene(str(v, 40));
+// A built-in artwork key or the URL of an image uploaded in the admin.
+const scene = (v) => normalizeScene(str(v, 500));
+// The URL of a video uploaded in the admin, or "" for none.
+const video = (v) => (isUploadedMedia(str(v, 500)) ? str(v, 500) : "");
+// Photos and videos uploaded in the admin, in display order.
+const gallery = (v) =>
+  list(v)
+    .map((item) => ({ url: str(item?.url, 500), caption: str(item?.caption, 200) }))
+    .filter((item) => isUploadedMedia(item.url))
+    .slice(0, 60)
+    .map((item) => ({ ...item, type: mediaType(item.url) }));
 const paragraphs = (v) =>
   (Array.isArray(v) ? v.join("\n\n") : text(v, 50000))
     .split(/\n\s*\n/)
@@ -63,6 +74,8 @@ export const resources = {
       days: 7,
       nights: 6,
       scene: "himalaya",
+      video: "",
+      gallery: [],
       featured: false,
       order: 0,
       published: false,
@@ -83,6 +96,8 @@ export const resources = {
         days,
         nights: int(b.nights, 0, 120) ?? (days ? days - 1 : null),
         scene: scene(b.scene),
+        video: video(b.video),
+        gallery: gallery(b.gallery),
         featured: bool(b.featured),
         order: int(b.order, 0, 999) ?? 0,
         published: bool(b.published),
@@ -127,10 +142,14 @@ export const resources = {
       scene: "himalaya",
       cardScene: "himalaya",
       homeScene: "",
+      video: "",
+      gallery: [],
       introTitle: "",
       introText: "",
       quote: "",
       bestTime: "",
+      whenToTravel: "",
+      places: [],
       experiences: [],
       order: 0,
       published: false,
@@ -146,10 +165,14 @@ export const resources = {
         scene: scene(b.scene),
         cardScene: scene(b.cardScene || b.scene),
         homeScene: b.homeScene ? scene(b.homeScene) : "",
+        video: video(b.video),
+        gallery: gallery(b.gallery),
         introTitle: str(b.introTitle, 200),
         introText: text(b.introText, 3000),
         quote: str(b.quote, 300),
         bestTime: str(b.bestTime, 200),
+        whenToTravel: text(b.whenToTravel, 1000),
+        places: strList(b.places, 80),
         experiences: strList(b.experiences, 60).map(slugify),
         order: int(b.order, 0, 999) ?? 0,
         published: bool(b.published),
@@ -194,13 +217,15 @@ export const resources = {
     label: "Experience",
     sort: { order: 1, name: 1 },
     publicPath: (d) => `/experiences/${d.slug}`,
-    defaults: () => ({ name: "", slug: "", line: "", scene: "heritage", body: "", moments: [], order: 0, published: false }),
+    defaults: () => ({ name: "", slug: "", line: "", scene: "heritage", video: "", gallery: [], body: "", moments: [], order: 0, published: false }),
     sanitize(b) {
       const doc = {
         name: str(b.name, 80),
         slug: slugify(b.slug || b.name),
         line: str(b.line, 200),
         scene: scene(b.scene),
+        video: video(b.video),
+        gallery: gallery(b.gallery),
         body: text(b.body, 4000),
         moments: strList(b.moments, 200),
         order: int(b.order, 0, 999) ?? 0,
@@ -225,6 +250,7 @@ export const resources = {
       date: new Date().toISOString().slice(0, 10),
       readTime: "",
       scene: "heritage",
+      gallery: [],
       excerpt: "",
       body: "",
       published: false,
@@ -238,6 +264,7 @@ export const resources = {
         date: /^\d{4}-\d{2}-\d{2}$/.test(date) && !Number.isNaN(Date.parse(date)) ? date : "",
         readTime: str(b.readTime, 40),
         scene: scene(b.scene),
+        gallery: gallery(b.gallery),
         excerpt: str(b.excerpt, 400),
         body: paragraphs(b.body),
         published: bool(b.published),

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import axios from "axios";
-import { BookOpen, ExternalLink, Inbox, LayoutDashboard, LogOut, MapPin, Menu, Route, Sparkles, X } from "lucide-react";
+import { BookOpen, ExternalLink, Images, Inbox, LayoutDashboard, LogOut, MapPin, Menu, Route, Sparkles, X } from "lucide-react";
 import { LogoMark } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +15,7 @@ const nav = [
   { href: "/admin/destinations", label: "Destinations", Icon: MapPin },
   { href: "/admin/experiences", label: "Experiences", Icon: Sparkles },
   { href: "/admin/journal", label: "Journal", Icon: BookOpen },
+  { href: "/admin/media", label: "Media", Icon: Images },
 ];
 
 export default function AdminShell({ email, newEnquiries = 0, children }) {

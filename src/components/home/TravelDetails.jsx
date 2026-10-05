@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { ArrowLink } from "@/components/ui/Button";
 import Landscape from "@/components/ui/Landscape";
 import ServicesList from "@/components/sections/ServicesList";
 import Faq from "@/components/sections/Faq";
-import EnquiryForm from "@/components/forms/EnquiryForm";
+import EnquirySection from "@/components/sections/EnquirySection";
 import { planningSteps } from "@/data/services";
 import { getArticles, getDestinations, getExperiences } from "@/lib/content";
 import { faqs } from "@/data/faq";
@@ -28,14 +30,26 @@ export function PlanningProcess() {
 
 export function ServicesPreview() {
   return (
-    <section className="bg-cream-soft text-text">
+    <section className="services-preview bg-cream-soft text-text">
       <div className="container-luxe py-24">
         <p className="eyebrow text-terracotta">OUR SERVICES</p>
         <div className="mt-4 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div><h2 className="display-lg max-w-2xl">Every detail, thoughtfully arranged.</h2><p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">Enjoy the places you came to see. We coordinate the planning, people and practical details behind your journey.</p></div>
           <ArrowLink href="/services">Explore our services</ArrowLink>
         </div>
-        <ServicesList />
+        <div className="services-preview-layout">
+          <aside className="services-care-panel">
+            <Image src="/images/ai/services-hospitality.png" alt="A hotel host warmly welcoming guests with refreshments at a luxury heritage hotel" fill sizes="(min-width: 1024px) 40vw, 100vw" className="services-curator-image" />
+            <div className="services-curator-shade" aria-hidden="true" />
+            <div className="services-curator-caption">
+              <p className="eyebrow text-gold-soft">PERSONAL SERVICE, AT EVERY STEP</p>
+              <h3>Your journey.<br /><em>Our undivided attention.</em></h3>
+              <p className="services-care-intro">Private itineraries, seamless arrangements and a dedicated team beside you throughout.</p>
+              <Link href="/plan-your-journey" className="services-care-cta">Talk to a travel curator<ArrowUpRight size={18} aria-hidden="true" /></Link>
+            </div>
+          </aside>
+          <ServicesList limit={6} />
+        </div>
       </div>
     </section>
   );
@@ -81,10 +95,5 @@ export function QuestionsPreview() {
 
 export async function EnquiryPreview() {
   const [destinations, experiences] = await Promise.all([getDestinations(), getExperiences()]);
-  return (
-    <section id="enquire" className="bg-cream text-text"><div className="container-luxe grid gap-12 py-24 lg:grid-cols-[1fr_1.25fr]">
-      <div><p className="eyebrow text-terracotta">ENQUIRE PRIVATELY</p><h2 className="display-lg mt-4">Start a conversation</h2><p className="mt-6 max-w-md text-sm leading-relaxed text-muted">Share your ideas, dates and the places you want to discover. Your enquiry is personally reviewed by a Painite curator, with a response within 24 hours.</p></div>
-      <EnquiryForm destinations={destinations} experiences={experiences} />
-    </div></section>
-  );
+  return <EnquirySection destinations={destinations} experiences={experiences} />;
 }

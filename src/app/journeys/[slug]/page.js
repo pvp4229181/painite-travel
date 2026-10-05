@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Compass, House, MapPin, Sun, Users } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
+import Gallery from "@/components/sections/Gallery";
 import Itinerary from "@/components/sections/Itinerary";
 import Landscape from "@/components/ui/Landscape";
 import JsonLd from "@/components/ui/JsonLd";
@@ -41,6 +42,7 @@ export default async function JourneyPage({ params }) {
     <>
       <PageHero
         scene={j.scene}
+        video={j.video}
         eyebrow={j.region}
         title={j.title}
         titleClass="text-[clamp(3rem,7.5vw,5.5rem)]"
@@ -99,6 +101,8 @@ export default async function JourneyPage({ params }) {
           <Itinerary days={j.itinerary} />
         </div>
       </section>
+
+      <Gallery items={j.gallery} eyebrow="Gallery" title="Moments from the journey" className="bg-cream-soft" />
 
       <CtaBand
         title={

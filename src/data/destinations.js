@@ -18,9 +18,12 @@ export const destinations = [
       { name: "Varanasi", line: "Spiritual heart of India", scene: "lake" },
       { name: "Madhya Pradesh", line: "Wildlife and ancient wonders", scene: "mist" },
     ],
-    experiences: ["heritage", "wildlife", "gastronomy", "wellness"],
-    journeys: ["golden-triangle", "rajasthan-in-depth", "kerala-slow-waters"],
+    experiences: ["culture", "wildlife", "gastronomy", "wellness"],
+    journeys: ["india-golden-triangle", "rajasthan-luxury", "kerala-slow-waters"],
     bestTime: "October to March",
+    whenToTravel:
+      "October to March suits most of the country. Rajasthan and the plains are at their finest in winter; Kerala and the south are pleasant nearly year-round; the Himalaya open up from spring through autumn.",
+    places: ["Delhi", "Agra", "Jaipur", "Jodhpur", "Udaipur", "Varanasi", "Kerala", "Goa", "Mumbai", "Ladakh", "Madhya Pradesh", "Himachal Pradesh", "Uttarakhand", "Karnataka", "Tamil Nadu"],
   },
   {
     slug: "nepal",
@@ -40,9 +43,12 @@ export const destinations = [
       { name: "Everest region", line: "Mountain flights and high valleys", scene: "himalaya" },
       { name: "Chitwan", line: "Rhino, tiger and jungle rivers", scene: "mist" },
     ],
-    experiences: ["heritage", "wildlife", "wellness", "romance"],
+    experiences: ["culture", "wildlife", "wellness", "romantic"],
     journeys: ["himalayan-kingdoms", "nepal-in-private"],
     bestTime: "March to May, October to November",
+    whenToTravel:
+      "October and November offer the clearest mountain views; March to May brings spring blooms. Winter is crisp and quiet at lower altitudes.",
+    places: ["Kathmandu", "Patan", "Bhaktapur", "Pokhara", "Chitwan", "Nagarkot", "Dhulikhel"],
   },
   {
     slug: "bhutan",
@@ -62,9 +68,12 @@ export const destinations = [
       { name: "Punakha", line: "Rice terraces and river confluences", scene: "tea", sun: false },
       { name: "Bumthang", line: "The spiritual heartland", scene: "mist" },
     ],
-    experiences: ["heritage", "wellness", "gastronomy", "romance"],
+    experiences: ["culture", "wellness", "gastronomy", "romantic"],
     journeys: ["himalayan-kingdoms", "bhutan-quiet-kingdom"],
     bestTime: "March to May, September to November",
+    whenToTravel:
+      "Spring (March to May) and autumn (September to November) are ideal, with clear skies and major festivals. Winter is serene and uncrowded.",
+    places: ["Paro", "Thimphu", "Punakha", "Gangtey", "Bumthang"],
   },
   {
     slug: "sri-lanka",
@@ -84,9 +93,12 @@ export const destinations = [
       { name: "Yala", line: "Leopards and wild coastline", scene: "mist" },
       { name: "Galle", line: "Forts, villas and the southern sea", scene: "lagoon" },
     ],
-    experiences: ["wildlife", "wellness", "heritage", "island-time"],
-    journeys: ["sri-lanka-revealed"],
+    experiences: ["wildlife", "wellness", "culture", "island-time"],
+    journeys: ["sri-lanka-in-style"],
     bestTime: "December to April (west and south), May to September (east)",
+    whenToTravel:
+      "The west and south coasts and hill country are best from December to March; the east coast shines from May to September.",
+    places: ["Colombo", "Kandy", "Sigiriya", "Dambulla", "Ella", "Nuwara Eliya", "Yala", "Galle", "Tangalle"],
   },
   {
     slug: "maldives",
@@ -106,9 +118,12 @@ export const destinations = [
       { name: "Raa Atoll", line: "Remote islands, wide lagoons", scene: "dusk" },
       { name: "Southern atolls", line: "Whale sharks and true seclusion", scene: "lagoon", sun: false },
     ],
-    experiences: ["island-time", "romance", "wellness", "gastronomy"],
-    journeys: ["maldives-private-island"],
+    experiences: ["island-time", "romantic", "wellness", "gastronomy"],
+    journeys: ["maldives-private-escape"],
     bestTime: "November to April",
+    whenToTravel:
+      "The dry season, November to April, offers the clearest skies and calmest seas. Baa Atoll's manta and whale-shark season peaks mid-year.",
+    places: ["North Malé Atoll", "South Malé Atoll", "Baa Atoll", "Ari Atoll", "Private islands"],
   },
 ];
 

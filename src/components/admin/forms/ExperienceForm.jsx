@@ -1,7 +1,7 @@
 "use client";
 
 import EditorFrame from "@/components/admin/EditorFrame";
-import { ImagePicker, Section, StringList, TextArea, TextInput, Toggle } from "@/components/admin/fields";
+import { GalleryField, ImagePicker, Section, StringList, TextArea, TextInput, Toggle, VideoPicker } from "@/components/admin/fields";
 import { useResourceForm } from "@/components/admin/useResourceForm";
 
 export default function ExperienceForm({ id, initial }) {
@@ -41,14 +41,23 @@ export default function ExperienceForm({ id, initial }) {
               addLabel="Add a moment"
             />
           </Section>
+          <Section title="Gallery" description="Photos and videos shown in a gallery on the experience page. Upload several at once, add captions and put them in order with the arrows.">
+            <GalleryField items={v.gallery} onChange={(x) => set("gallery", x)} />
+          </Section>
         </div>
         <aside className="space-y-6">
           <Section title="Visibility">
             <Toggle label="Published" description="Show this experience on the website." checked={v.published} onChange={(x) => set("published", x)} />
             <TextInput label="Order" type="number" min={0} value={v.order} onChange={(x) => set("order", x)} hint="Lower numbers appear first." />
           </Section>
-          <Section title="Image">
+          <Section title="Image and video">
             <ImagePicker value={v.scene} onChange={(x) => set("scene", x)} />
+            <VideoPicker
+              label="Hero video"
+              value={v.video}
+              onChange={(x) => set("video", x)}
+              hint="Plays behind the title at the top of the experience page. Optional."
+            />
           </Section>
         </aside>
       </div>

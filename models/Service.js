@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import GalleryItemSchema from "./GalleryItem.js";
 
 // A Service is a signature experience: heritage, wildlife, wellness, etc.
 const ServiceSchema = new mongoose.Schema(
@@ -9,6 +10,8 @@ const ServiceSchema = new mongoose.Schema(
     body: String,
     moments: [String],
     scene: String,
+    video: String,
+    gallery: [GalleryItemSchema],
     order: { type: Number, default: 0 },
     published: { type: Boolean, default: true },
   },

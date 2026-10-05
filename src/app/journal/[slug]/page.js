@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
+import Gallery from "@/components/sections/Gallery";
 import { ArrowLink } from "@/components/ui/Button";
 import { formatDate } from "@/data/journal";
 import { getArticle, getArticles } from "@/lib/content";
@@ -47,6 +48,7 @@ export default async function ArticlePage({ params }) {
           </div>
         </div>
       </article>
+      <Gallery items={a.gallery} title="In pictures" eyebrow="Gallery" className="bg-cream-soft" />
       <section className="bg-ink text-ivory">
         <div className="container-luxe grid gap-8 py-16 md:grid-cols-2">
           {more.map((m) => (

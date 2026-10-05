@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
-import { EASE } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 
+// Every answer stays in the HTML (collapsed with CSS) so search engines can read them all.
 export default function Faq({ items }) {
   const [open, setOpen] = useState(0);
   return (
@@ -27,20 +27,18 @@ export default function Faq({ items }) {
                 {isOpen ? <Minus className="size-4 shrink-0" strokeWidth={1.25} /> : <Plus className="size-4 shrink-0" strokeWidth={1.25} />}
               </button>
             </h3>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  id={`faq-${i}`}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.45, ease: EASE }}
-                  className="overflow-hidden"
-                >
-                  <p className="max-w-2xl pb-7 text-[14px] leading-[1.75] text-muted">{f.a}</p>
-                </motion.div>
+            <div
+              id={`faq-${i}`}
+              inert={!isOpen}
+              className={cn(
+                "grid transition-[grid-template-rows,opacity] duration-500 ease-luxe",
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
               )}
-            </AnimatePresence>
+            >
+              <div className="overflow-hidden">
+                <p className="max-w-2xl pb-7 text-[14px] leading-[1.75] text-muted">{f.a}</p>
+              </div>
+            </div>
           </div>
         );
       })}

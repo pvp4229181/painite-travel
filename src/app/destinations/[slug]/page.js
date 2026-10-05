@@ -2,10 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
+import Gallery from "@/components/sections/Gallery";
 import Landscape from "@/components/ui/Landscape";
 import { ArrowLink, Button } from "@/components/ui/Button";
 import { durationLabel } from "@/data/journeys";
-import { getDestination, getDestinations, getExperiences, getJourneysFor } from "@/lib/content";
+import { getArticles, getDestination, getDestinations, getExperiences, getJourneysFor } from "@/lib/content";
 import { Reveal, Stagger, StaggerItem } from "@/lib/motion";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }) {
   const d = await getDestination(slug);
   if (!d) return {};
   return buildMetadata({
-    title: `${d.name}, privately`,
+    title: `Luxury private travel in ${d.name}`,
     description: `${d.heroLine} ${d.introText}`,
     path: `/destinations/${d.slug}`,
   });
@@ -30,14 +31,27 @@ export default async function DestinationPage({ params }) {
   const d = await getDestination(slug);
   if (!d) notFound();
 
-  const [trips, allExperiences, destinations] = await Promise.all([getJourneysFor(d.slug), getExperiences(), getDestinations()]);
+  const [trips, allExperiences, destinations, articles] = await Promise.all([
+    getJourneysFor(d.slug),
+    getExperiences(),
+    getDestinations(),
+    getArticles(),
+  ]);
   const exps = (d.experiences ?? []).map((s) => allExperiences.find((e) => e.slug === s)).filter(Boolean);
+  const reading = articles.filter((a) => a.category === d.name).slice(0, 3);
+  const places = d.places ?? [];
 
   return (
     <>
       <PageHero
         scene={d.scene}
-        title={d.name}
+        video={d.video}
+        title={
+          <>
+            <span className="eyebrow mb-4 block text-ivory/80">Luxury private travel in</span>
+            {d.name}
+          </>
+        }
         subtitle={d.heroLine}
         footer={
           <div className="container-luxe relative pb-6">
@@ -95,6 +109,41 @@ export default async function DestinationPage({ params }) {
         </div>
       </section>
 
+      {/* Places + when to travel */}
+      {(places.length > 0 || d.whenToTravel || d.bestTime) && (
+        <section className="bg-cream-soft text-text">
+          <div className="container-luxe grid gap-14 py-20 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+            {places.length > 0 && (
+              <div>
+                <p className="eyebrow text-terracotta">Where we take you</p>
+                <Reveal as="h2" className="display-md mt-4">
+                  Across {d.name}
+                </Reveal>
+                <ul className="mt-8 flex flex-wrap gap-2.5">
+                  {places.map((place) => (
+                    <li key={place} className="border border-line px-4 py-2 text-[13px]">
+                      {place}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {(d.whenToTravel || d.bestTime) && (
+              <div>
+                <p className="eyebrow text-terracotta">Best time to visit</p>
+                <Reveal as="h2" className="display-md mt-4">
+                  When to travel
+                </Reveal>
+                {d.bestTime && <p className="mt-6 font-serif text-[1.45rem] italic text-terracotta">{d.bestTime}</p>}
+                {d.whenToTravel && <p className="mt-4 max-w-md text-[14px] leading-[1.75] text-muted">{d.whenToTravel}</p>}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      <Gallery items={d.gallery} eyebrow="Gallery" title={`${d.name} in pictures`} />
+
       {/* Signature experiences */}
       <section className="bg-ink text-ivory">
         <div className="container-luxe py-24">
@@ -150,7 +199,32 @@ export default async function DestinationPage({ params }) {
         </section>
       )}
 
-      <CtaBand />
+      {/* Journal */}
+      {reading.length > 0 && (
+        <section className="bg-cream-soft text-text">
+          <div className="container-luxe py-24">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <Reveal as="h2" className="display-md">
+                Reading on {d.name}
+              </Reveal>
+              <ArrowLink href="/journal">Read the journal</ArrowLink>
+            </div>
+            <div className="mt-12 grid gap-8 md:grid-cols-3">
+              {reading.map((a) => (
+                <Link key={a.slug} href={`/journal/${a.slug}`} className="group block">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Landscape scene={a.scene} className="transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                  <h3 className="mt-5 font-serif text-[1.75rem] leading-tight group-hover:text-terracotta">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{a.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <CtaBand title={`Design your ${d.name} journey.`} cta="Plan your journey" href={`/plan-your-journey?destination=${d.slug}`} />
     </>
   );
 }

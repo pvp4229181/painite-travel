@@ -1,18 +1,48 @@
 export const journal = [
   {
-    slug: "best-time-to-visit-india", title: "Best Time to Visit India", category: "India", date: "2026-10-05", readTime: "3 min read", scene: "heritage",
-    excerpt: "Choose the season around your route, from Rajasthan's cooler months to summer in the mountains.",
-    body: ["India's landscapes call for different travel calendars. Start with the regions you want to explore, then choose dates that suit your pace and the experiences you value.", "For a route through Delhi, Agra and Rajasthan, cooler months make long days outdoors more comfortable. Mountain journeys require a separate approach, with altitude and access shaping the itinerary.", "Tell your curator which places matter most to you. We will help balance seasonal conditions, hotel availability and time on the road before confirming your plans."]
+    slug: "best-time-to-visit-india", title: "Best Time to Visit India", category: "India", date: "2026-01-10", readTime: "3 min read", scene: "heritage",
+    excerpt: "A season-by-season guide to when India's regions are at their finest, from Rajasthan's winters to the Himalayan summer.",
+    body: ["India spans deserts, plains, mountains and two coastlines, so there is no single best time, only the best time for where you are going.", "For most first journeys through the north (Delhi, Agra, Rajasthan and Varanasi) the cool, dry months of October to March are ideal. Kerala and the southern coast are pleasant for much of the year, with the clearest weather from November to February. The Himalaya, including Ladakh and much of Nepal and Bhutan, open up from spring through autumn.", "Tell your curator which places matter most to you. We plan around both weather and crowds, timing landmark visits for the quietest, most beautiful light."]
   },
   {
-    slug: "best-time-to-visit-rajasthan", title: "Best Time to Visit Rajasthan", category: "India", date: "2026-10-05", readTime: "3 min read", scene: "desert",
-    excerpt: "Plan palace stays, desert evenings and walks through the old cities around the cooler season.",
-    body: ["Rajasthan is best approached with enough time to enjoy its cities and the distances between them. Cooler weather makes fort visits, market walks and time in the desert more comfortable.", "Build your days around early starts and quiet breaks. Jaipur, Jodhpur and Udaipur each deserve time beyond their headline sights, while a heritage stay can be a reason to slow the itinerary further.", "Popular palace hotels and special celebrations can shape availability. Share your preferred dates early so the route can be built around the stays that suit you."]
+    slug: "best-time-to-visit-rajasthan", title: "Best Time to Visit Rajasthan", category: "India", date: "2026-01-12", readTime: "3 min read", scene: "desert",
+    excerpt: "Why winter is Rajasthan's golden season, and how to travel the desert state in comfort.",
+    body: ["Rajasthan is at its most magical between October and March, when days are warm and clear and evenings are cool. This is the season for palace stays, lake views in Udaipur and the forts of Jodhpur and Jaipur without the summer heat.", "Build your days around early starts and quiet breaks. Jaipur, Jodhpur and Udaipur each deserve time beyond their headline sights, while a heritage stay can be a reason to slow the itinerary further.", "Popular palace hotels and special celebrations can shape availability. Share your preferred dates early so the route can be built around the stays that suit you."]
   },
   {
-    slug: "best-luxury-hotels-in-rajasthan", title: "Best Luxury Hotels in Rajasthan", category: "India", date: "2026-10-05", readTime: "3 min read", scene: "lake",
-    excerpt: "Palace, restored haveli or intimate boutique: choosing a stay that suits your journey.",
-    body: ["The best hotel for your journey depends on what you want from the stay. A grand palace offers a different experience from a small restored haveli or a contemporary retreat.", "Consider location alongside atmosphere. Staying near an old city makes guided walks easier; a rural property offers quieter evenings but requires more time for transfers.", "We select accommodation as part of the whole itinerary, considering your interests, room preferences, family needs and the time you have to enjoy each property. Ask your curator for a shortlist tailored to your route."]
+    slug: "best-luxury-hotels-in-rajasthan", title: "Best Luxury Hotels in Rajasthan", category: "India", date: "2026-01-14", readTime: "3 min read", scene: "lake",
+    excerpt: "How we think about choosing between palaces, heritage hotels and design-led boutiques.",
+    body: ["Rajasthan has an extraordinary concentration of remarkable hotels, from former royal residences to intimate boutiques. Rather than ranking them, we match each stay to the journey and the traveller: a lakeside palace for romance, a fort for drama, a country retreat for calm.", "Consider location alongside atmosphere. Staying near an old city makes guided walks easier; a rural property offers quieter evenings but requires more time for transfers.", "We know these properties first-hand and choose the right room, not simply the right hotel. Ask your curator for a shortlist tailored to your route."]
+  },
+  {
+    slug: "india-first-time-traveller-guide", title: "India First-Time Traveller Guide", category: "India", date: "2026-01-16", readTime: "3 min read", scene: "golden",
+    excerpt: "Practical, reassuring advice for a first private journey through India.",
+    body: ["A first journey to India is best kept focused: a handful of places, travelled well, rather than a rushed circuit.", "With a private car, expert guides and the right hotels, the country becomes remarkably easy and deeply rewarding.", "We handle the logistics entirely so that you experience only the journey."]
+  },
+  {
+    slug: "best-time-to-visit-nepal", title: "Best Time to Visit Nepal", category: "Nepal", date: "2026-01-08", readTime: "3 min read", scene: "himalaya",
+    excerpt: "When the mountains are clearest and the valleys most beautiful.",
+    body: ["October and November bring the clearest Himalayan views of the year, ideal for mountain panoramas.", "March to May offers warm days and spring blooms, while winter is crisp and quiet at lower altitudes.", "We plan mountain viewpoints and heritage days around the best light and conditions."]
+  },
+  {
+    slug: "best-time-to-visit-bhutan", title: "Best Time to Visit Bhutan", category: "Bhutan", date: "2026-01-05", readTime: "3 min read", scene: "bhutan",
+    excerpt: "Seasons, festivals and travel conditions in the Himalayan kingdom.",
+    body: ["Spring (March to May) and autumn (September to November) are Bhutan's finest seasons, with clear skies and major festivals.", "Winter is serene and uncrowded at lower altitudes, while summer brings lush green valleys and occasional rain.", "We time journeys around both the weather and Bhutan's remarkable tshechu festivals where you wish to see them."]
+  },
+  {
+    slug: "bhutan-vs-nepal", title: "Bhutan vs Nepal: Which to Choose", category: "Bhutan", date: "2026-01-06", readTime: "3 min read", scene: "himalaya",
+    excerpt: "Two Himalayan cultures, two very different journeys, or one that combines them.",
+    body: ["Nepal offers dramatic landscapes, living heritage cities and a wide range of experiences at every budget.", "Bhutan is quieter, more measured and more exclusive, with a strong sense of cultural preservation.", "For many travellers the ideal answer is both, combined in a single carefully paced journey."]
+  },
+  {
+    slug: "luxury-travel-in-sri-lanka", title: "Luxury Travel in Sri Lanka", category: "Sri Lanka", date: "2026-01-18", readTime: "3 min read", scene: "tea",
+    excerpt: "How to experience the island's variety in comfort and style.",
+    body: ["Sri Lanka packs remarkable variety into a compact island: ancient cities, tea country, wildlife and coast.", "A private driver-guide and a string of boutique hotels make the transitions effortless.", "We design journeys that flow naturally from the highlands to the sea."]
+  },
+  {
+    slug: "best-safari-experiences-in-sri-lanka", title: "Best Safari Experiences in Sri Lanka", category: "Sri Lanka", date: "2026-01-19", readTime: "3 min read", scene: "wildlife",
+    excerpt: "Leopards, elephants and the art of the private safari.",
+    body: ["Yala and Wilpattu offer some of the best leopard-tracking in the world, best enjoyed with expert naturalists.", "Private vehicles and stylish tented camps transform a safari into something intimate.", "We pace wildlife days for the best chances at dawn and dusk."]
   },
   {
     slug: "the-taj-at-first-light",
@@ -44,8 +74,8 @@ export const journal = [
     ],
   },
   {
-    slug: "choosing-the-right-maldives-island",
-    title: "Choosing the right Maldivian island",
+    slug: "maldives-how-to-choose-the-right-island",
+    title: "Maldives: How to Choose the Right Island",
     category: "Maldives",
     date: "2026-05-20",
     readTime: "4 min read",
