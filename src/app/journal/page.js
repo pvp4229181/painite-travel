@@ -24,7 +24,7 @@ export default async function JournalPage() {
           <Link href={`/journal/${lead.slug}`} className="group grid items-center gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
             <div className="relative aspect-[16/10] overflow-hidden">
               <div className="absolute inset-0 transition-transform duration-[1.4s] ease-luxe group-hover:scale-[1.04]">
-                <Landscape scene={lead.scene} />
+                <Landscape scene={lead.scene} sizes="(min-width: 1280px) 800px, (min-width: 768px) 67vw, 100vw" />
               </div>
             </div>
             <div>

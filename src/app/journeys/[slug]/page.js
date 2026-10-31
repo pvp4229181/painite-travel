@@ -7,7 +7,6 @@ import Itinerary from "@/components/sections/Itinerary";
 import Landscape from "@/components/ui/Landscape";
 import JsonLd from "@/components/ui/JsonLd";
 import { Button } from "@/components/ui/Button";
-import FilmButton from "@/components/ui/FilmButton";
 import { getJourney, getJourneys } from "@/lib/content";
 import { Reveal, Stagger, StaggerItem } from "@/lib/motion";
 import { buildMetadata, tripJsonLd } from "@/lib/seo";
@@ -51,7 +50,6 @@ export default async function JourneyPage({ params }) {
       >
         <div className="flex flex-wrap items-center gap-6">
           <Button href={enquire}>Enquire about this journey</Button>
-          <FilmButton />
         </div>
       </PageHero>
 
@@ -81,7 +79,7 @@ export default async function JourneyPage({ params }) {
               </Reveal>
             </div>
             <Reveal className="relative aspect-[4/2.9] overflow-hidden">
-              <Landscape scene={j.slug === "himalayan-kingdoms" ? "golden" : j.scene} sun={j.slug === "himalayan-kingdoms" ? { x: 20, y: 40, r: 5 } : undefined} />
+              <Landscape scene={j.scene} />
             </Reveal>
           </div>
         </div>

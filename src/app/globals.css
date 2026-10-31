@@ -203,6 +203,7 @@ button, summary { cursor: pointer; }
 section[id] { scroll-margin-top: 90px; }
 @media (max-width: 640px) { .home-hero .landscape-root img { object-position: 62% center; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@media (prefers-reduced-motion: reduce) { .motion-reveal { opacity: 1 !important; transform: none !important; } }
 .enquiry-section { background: var(--color-cream-soft); color: var(--color-text); }
 .enquiry-standalone { padding-top: 72px; }
 .enquiry-layout { display: grid; gap: 48px; padding-block: 88px; align-items: start; }

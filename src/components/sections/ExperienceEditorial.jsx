@@ -18,7 +18,7 @@ export default function ExperienceEditorial({ experience: e, destinations, other
   const enquiry = `/plan-your-journey?experience=${encodeURIComponent(e.slug)}`;
   return <div className={`experience-editorial experience-theme-${e.slug}`}>
     <section className="experience-page-hero">
-      <Landscape scene={e.scene} video={e.video} priority />
+      <Landscape scene={e.scene} video={e.video} sizes="100vw" priority />
       <div className="experience-hero-shade" aria-hidden="true" />
       <div className="container-luxe experience-hero-content">
         <Link className="experience-breadcrumb" href="/experiences">SIGNATURE EXPERIENCES <span>/</span> {e.name}</Link>

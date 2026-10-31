@@ -1,0 +1,162 @@
+{
+  "delhi": {
+    "label": "Delhi",
+    "src": "/images/themed-2k/cities/delhi.webp",
+    "alt": "India Gate and the broad tree-lined ceremonial boulevard in New Delhi",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "old-delhi": {
+    "label": "Old Delhi",
+    "src": "/images/themed-2k/cities/old-delhi.webp",
+    "alt": "Jama Masjid in Old Delhi with its recognizable red sandstone facade",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "agra": {
+    "label": "Agra",
+    "src": "/images/themed-2k/cities/agra.webp",
+    "alt": "The authentic red sandstone walls and Amar Singh Gate of Agra Fort in Agra",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "jaipur": {
+    "label": "Jaipur",
+    "src": "/images/themed-2k/cities/jaipur.webp",
+    "alt": "The iconic pink sandstone Hawa Mahal facade in Jaipur",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "fatehpur-sikri": {
+    "label": "Fatehpur Sikri",
+    "src": "/images/themed-2k/cities/fatehpur-sikri.webp",
+    "alt": "The red sandstone Mughal courtyard and tiered Panch Mahal pavilion at Fatehpur Sikri near Agra",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "shekhawati": {
+    "label": "Shekhawati",
+    "src": "/images/themed-2k/cities/shekhawati.webp",
+    "alt": "A traditional fresco-painted haveli courtyard in Mandawa in the Shekhawati region of Rajasthan",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "thar-desert": {
+    "label": "Thar Desert",
+    "src": "/images/themed-2k/cities/thar-desert.webp",
+    "alt": "The rolling golden sand dunes of the Thar Desert near Jaisalmer",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "jodhpur": {
+    "label": "Jodhpur",
+    "src": "/images/themed-2k/cities/jodhpur.webp",
+    "alt": "Mehrangarh Fort rising above the tightly clustered blue houses of Jodhpur",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "kochi": {
+    "label": "Fort Kochi",
+    "src": "/images/themed-2k/cities/kochi.webp",
+    "alt": "The distinctive cantilevered Chinese fishing nets on Fort Kochi?s waterfront in Kerala",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "munnar": {
+    "label": "Munnar",
+    "src": "/images/themed-2k/cities/munnar.webp",
+    "alt": "Munnar in Kerala?s Western Ghats",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "kovalam": {
+    "label": "Kovalam",
+    "src": "/images/themed-2k/cities/kovalam.webp",
+    "alt": "Kovalam Lighthouse Beach in Kerala",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "thiruvananthapuram": {
+    "label": "Thiruvananthapuram",
+    "src": "/images/themed-2k/cities/thiruvananthapuram.webp",
+    "alt": "The authentic ornate gopuram of Sree Padmanabhaswamy Temple viewed across its temple tank in Thiruvananthapuram",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "kandy": {
+    "label": "Kandy",
+    "src": "/images/themed-2k/cities/kandy.webp",
+    "alt": "Kandy Lake and the traditional white exterior of the Temple of the Sacred Tooth Relic in Kandy",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "colombo": {
+    "label": "Colombo",
+    "src": "/images/themed-2k/cities/colombo.webp",
+    "alt": "Colombo?s Galle Face waterfront with the historic old Parliament building and the modern Sri Lankan city skyline",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "dhulikhel": {
+    "label": "Dhulikhel",
+    "src": "/images/themed-2k/cities/dhulikhel.webp",
+    "alt": "Dhulikhel in Nepal",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "gangtey": {
+    "label": "Gangtey",
+    "src": "/images/themed-2k/cities/gangtey.webp",
+    "alt": "Gangtey Goenpa monastery on its real ridge overlooking the broad green U-shaped Phobjikha Valley in Bhutan",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "male": {
+    "label": "Malé",
+    "src": "/images/themed-2k/cities/male.webp",
+    "alt": "An aerial view of the compact island city of Malé in the Maldives",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "kathmandu": {
+    "label": "Kathmandu",
+    "src": "/images/themed-2k/cities/kathmandu.webp",
+    "alt": "Boudhanath Stupa in Kathmandu",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "bhaktapur": {
+    "label": "Bhaktapur",
+    "src": "/images/themed-2k/cities/bhaktapur.webp",
+    "alt": "Nyatapola Temple and Taumadhi Square in Bhaktapur",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  },
+  "paro": {
+    "label": "Paro",
+    "src": "/images/themed-2k/cities/paro.webp",
+    "alt": "Rinpung Dzong above the Paro Chhu river and its traditional covered wooden bridge in Paro",
+    "width": 2048,
+    "height": 1365,
+    "generator": "ImageGen"
+  }
+}

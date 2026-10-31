@@ -33,8 +33,8 @@ export function mediaType(url) {
 }
 
 /** An uploaded image scaled down to at most `width` pixels wide, keeping its shape. */
-export function mediaImage(url, width = 1600) {
-  return isUploadedMedia(url) ? transform(url, `c_limit,w_${width},f_auto,q_auto`) : url;
+export function mediaImage(url, width = 3840) {
+  return isUploadedMedia(url) ? transform(url, `c_limit,w_${width},f_auto,q_90`) : url;
 }
 
 // Cloudinary's free-plan limits, checked before uploading so errors are friendly.

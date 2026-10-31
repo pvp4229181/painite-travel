@@ -5,11 +5,11 @@ import Landscape from "@/components/ui/Landscape";
 import { Button } from "@/components/ui/Button";
 
 const directions = {
-  "bespoke-travel": { eyebrow: "CREATED FROM A CONVERSATION", heading: "A journey with your name on it.", line: "Your interests. Your rhythm. Every detail considered.", image: "/images/ai/customer-enquiry.png", alt: "Guests discussing their journey with a travel curator", section: "From an idea to an extraordinary journey." },
-  "luxury-hotels": { eyebrow: "THE ART OF A BEAUTIFUL STAY", heading: "Stay somewhere that stays with you.", line: "Heritage palaces, intimate lodges and island hideaways.", image: "/images/ai/island.webp", alt: "Luxury overwater villas beside a tropical island", section: "A collection of possibilities." },
-  "private-guides": { eyebrow: "MEET THE PEOPLE WHO KNOW", heading: "A place comes alive through its people.", line: "Local knowledge. Personal connections. A deeper perspective.", image: "/images/ai/service-guides-hero.png", alt: "A private guide exploring palace architecture with guests", section: "Follow your curiosity." },
-  "airport-assistance": { eyebrow: "FROM TOUCHDOWN TO TAKE-OFF", heading: "Arrive with ease. Leave with memories.", line: "A warm welcome and a well-coordinated onward journey.", image: "/images/ai/service-airport-hero.png", alt: "An airport host welcoming travellers with their luggage", section: "Every connection, considered." },
-  "yoga-retreats": { eyebrow: "SPACE TO SLOW DOWN", heading: "You hold the space. We handle the details.", line: "Thoughtful retreat planning for teachers, studios and communities.", image: "/images/ai/service-yoga-hero.png", alt: "A small yoga retreat group meditating beside tropical gardens", section: "The foundations of a meaningful retreat." },
+  "bespoke-travel": { eyebrow: "CREATED FROM A CONVERSATION", heading: "A journey with your name on it.", line: "Your interests. Your rhythm. Every detail considered.", image: "/images/themed-2k/scenes/customer-enquiry.webp", alt: "Travel maps, field notes and a camera ready for a journey", section: "From an idea to an extraordinary journey." },
+  "luxury-hotels": { eyebrow: "THE ART OF A BEAUTIFUL STAY", heading: "Stay somewhere that stays with you.", line: "Heritage palaces, intimate lodges and island hideaways.", image: "/images/themed-2k/scenes/island.webp", alt: "Luxury overwater villas beside a tropical island", section: "A collection of possibilities." },
+  "private-guides": { eyebrow: "MEET THE PEOPLE WHO KNOW", heading: "A place comes alive through its people.", line: "Local knowledge. Personal connections. A deeper perspective.", image: "/images/themed-2k/scenes/service-guides-hero.webp", alt: "Ornate palace architecture in Jaipur", section: "Follow your curiosity." },
+  "airport-assistance": { eyebrow: "FROM TOUCHDOWN TO TAKE-OFF", heading: "Arrive with ease. Leave with memories.", line: "A warm welcome and a well-coordinated onward journey.", image: "/images/themed-2k/scenes/service-airport-hero.webp", alt: "A calm modern international airport terminal", section: "Every connection, considered." },
+  "yoga-retreats": { eyebrow: "SPACE TO SLOW DOWN", heading: "You hold the space. We handle the details.", line: "Thoughtful retreat planning for teachers, studios and communities.", image: "/images/themed-2k/scenes/service-yoga-hero.webp", alt: "A peaceful sunset on the coast at Varkala, Kerala", section: "The foundations of a meaningful retreat." },
 };
 
 function Item({ item, number }) {
@@ -20,7 +20,7 @@ export default function ServiceEditorial({ service, allServices }) {
   const d = directions[service.slug];
   return <div className={`service-editorial service-${service.slug}`}>
     <section className="service-screen-hero">
-      <Image src={d.image} alt={d.alt} fill priority sizes="100vw" className="service-screen-image" />
+      <Image quality={90} src={d.image} alt={d.alt} fill priority sizes="100vw" className="service-screen-image" />
       <div className="service-screen-shade" aria-hidden="true" />
       <div className="container-luxe service-screen-content">
         <Link href="/services" className="service-screen-back">OUR SERVICES <span>/</span> {service.navLabel}</Link>

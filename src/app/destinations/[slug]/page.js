@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
@@ -10,6 +11,29 @@ import { getArticles, getDestination, getDestinations, getExperiences, getJourne
 import { Reveal, Stagger, StaggerItem } from "@/lib/motion";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+
+const regionImages = {
+  Rajasthan: { src: "/images/themed-2k/regions/rajasthan.webp", alt: "Amber Fort in Rajasthan", position: "center 35%" },
+  Kerala: { src: "/images/themed-2k/regions/kerala.webp", alt: "A houseboat on Kerala’s backwaters" },
+  Varanasi: { src: "/images/themed-2k/regions/varanasi.webp", alt: "Varanasi’s riverside ghats and temples" },
+  "Madhya Pradesh": { src: "/images/themed-2k/regions/madhya-pradesh.webp", alt: "A tiger in Kanha National Park" },
+  "Kathmandu Valley": { src: "/images/themed-2k/regions/kathmandu-valley.webp", alt: "Temple architecture in Patan Durbar Square" },
+  Pokhara: { src: "/images/themed-2k/regions/pokhara.webp", alt: "Phewa Lake and the Annapurna range from Pokhara" },
+  "Everest region": { src: "/images/themed-2k/regions/everest-region.webp", alt: "Namche Bazaar in Nepal’s Everest region", position: "center 30%" },
+  Chitwan: { src: "/images/themed-2k/regions/chitwan.webp", alt: "A one-horned rhinoceros in Chitwan National Park" },
+  Paro: { src: "/images/themed-2k/regions/paro.webp", alt: "Tiger’s Nest monastery in Paro" },
+  Thimphu: { src: "/images/themed-2k/regions/thimphu.webp", alt: "Tashichho Dzong in Thimphu" },
+  Punakha: { src: "/images/themed-2k/regions/punakha.webp", alt: "Punakha Dzong beside the river in Bhutan" },
+  Bumthang: { src: "/images/themed-2k/regions/bumthang.webp", alt: "Jakar Dzong in Bumthang" },
+  "Cultural Triangle": { src: "/images/themed-2k/regions/cultural-triangle.webp", alt: "Sigiriya rock fortress at sunset" },
+  "Hill Country": { src: "/images/themed-2k/regions/hill-country.webp", alt: "Tea plantations in Sri Lanka’s hill country" },
+  Yala: { src: "/images/themed-2k/regions/yala.webp", alt: "A leopard in Yala National Park" },
+  Galle: { src: "/images/themed-2k/regions/galle.webp", alt: "Galle lighthouse framed by palm trees", position: "center 15%" },
+  "North Malé Atoll": { src: "/images/themed-2k/regions/north-male-atoll.webp", alt: "A palm-fringed beach in Thulusdhoo, North Malé Atoll" },
+  "Baa Atoll": { src: "/images/themed-2k/regions/baa-atoll.webp", alt: "An island and turquoise lagoon in Baa Atoll" },
+  "Raa Atoll": { src: "/images/themed-2k/regions/raa-atoll.webp", alt: "An infinity pool at sunset in Raa Atoll" },
+  "Southern atolls": { src: "/images/themed-2k/regions/southern-atolls.webp", alt: "A whale shark swimming in open water" },
+};
 
 export async function generateStaticParams() {
   return (await getDestinations()).map((d) => ({ slug: d.slug }));
@@ -45,7 +69,7 @@ export default async function DestinationPage({ params }) {
     <>
       <PageHero
         scene={d.scene}
-        video={d.video}
+        video={d.video || (["india", "nepal", "bhutan", "sri-lanka", "maldives"].includes(d.slug) ? `/videos/hero/${d.slug}.mp4?v=20261006-clean` : undefined)}
         title={
           <>
             <span className="eyebrow mb-4 block text-ivory/80">Luxury private travel in</span>
@@ -98,7 +122,18 @@ export default async function DestinationPage({ params }) {
               <StaggerItem key={r.name} className={cn(i % 2 === 1 && "lg:mt-8")}>
                 <div className="group relative aspect-[4/5] overflow-hidden">
                   <div className="absolute inset-0 transition-transform duration-[1.4s] ease-luxe group-hover:scale-105">
-                    <Landscape scene={r.scene} />
+                    {regionImages[r.name] ? (
+                      <Image quality={90}
+                        src={regionImages[r.name].src}
+                        alt={regionImages[r.name].alt}
+                        style={{ objectPosition: regionImages[r.name].position }}
+                        fill
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <Landscape scene={r.scene} />
+                    )}
                   </div>
                 </div>
                 <h3 className="mt-4 font-serif text-[1.65rem] leading-none">{r.name}</h3>

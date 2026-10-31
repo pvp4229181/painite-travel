@@ -1,0 +1,252 @@
+{
+  "journeys": 8,
+  "days": 49,
+  "mismatches": [],
+  "entries": [
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Arrival in Kathmandu",
+      "scene": "kathmandu"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Kathmandu's cultural treasures",
+      "scene": "kathmandu"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Bhaktapur and Patan",
+      "scene": "bhaktapur"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Into the mountains",
+      "scene": "dhulikhel"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Pokhara and the Annapurnas",
+      "scene": "pokhara"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Chitwan National Park",
+      "scene": "chitwan"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Return to Kathmandu",
+      "scene": "kathmandu"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Fly to Paro, Bhutan",
+      "scene": "paro"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Thimphu",
+      "scene": "thimphu"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Punakha",
+      "scene": "punakha"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Gangtey and the Phobjikha Valley",
+      "scene": "gangtey"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Tiger's Nest",
+      "scene": "tigers-nest"
+    },
+    {
+      "journey": "himalayan-kingdoms",
+      "title": "Departure",
+      "scene": "paro"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "Arrival in Delhi",
+      "scene": "delhi"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "Old and New Delhi",
+      "scene": "old-delhi"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "To Agra",
+      "scene": "agra"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "The Taj Mahal at sunrise",
+      "scene": "taj-mahal"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "Fatehpur Sikri to Jaipur",
+      "scene": "fatehpur-sikri"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "Jaipur",
+      "scene": "jaipur"
+    },
+    {
+      "journey": "india-golden-triangle",
+      "title": "Departure",
+      "scene": "jaipur"
+    },
+    {
+      "journey": "maldives-private-escape",
+      "title": "Arrival by seaplane",
+      "scene": "male"
+    },
+    {
+      "journey": "maldives-private-escape",
+      "title": "Island time",
+      "scene": "maldives"
+    },
+    {
+      "journey": "maldives-private-escape",
+      "title": "Departure",
+      "scene": "male"
+    },
+    {
+      "journey": "kerala-slow-waters",
+      "title": "Fort Kochi",
+      "scene": "kochi"
+    },
+    {
+      "journey": "kerala-slow-waters",
+      "title": "Munnar",
+      "scene": "munnar"
+    },
+    {
+      "journey": "kerala-slow-waters",
+      "title": "The backwaters",
+      "scene": "kerala"
+    },
+    {
+      "journey": "kerala-slow-waters",
+      "title": "Ayurveda by the sea",
+      "scene": "kovalam"
+    },
+    {
+      "journey": "kerala-slow-waters",
+      "title": "Departure",
+      "scene": "thiruvananthapuram"
+    },
+    {
+      "journey": "bhutan-quiet-kingdom",
+      "title": "Paro",
+      "scene": "paro"
+    },
+    {
+      "journey": "bhutan-quiet-kingdom",
+      "title": "Thimphu",
+      "scene": "thimphu"
+    },
+    {
+      "journey": "bhutan-quiet-kingdom",
+      "title": "Punakha",
+      "scene": "punakha"
+    },
+    {
+      "journey": "bhutan-quiet-kingdom",
+      "title": "Tiger's Nest",
+      "scene": "tigers-nest"
+    },
+    {
+      "journey": "bhutan-quiet-kingdom",
+      "title": "Departure",
+      "scene": "paro"
+    },
+    {
+      "journey": "nepal-in-private",
+      "title": "Kathmandu Valley",
+      "scene": "kathmandu"
+    },
+    {
+      "journey": "nepal-in-private",
+      "title": "Pokhara",
+      "scene": "pokhara"
+    },
+    {
+      "journey": "nepal-in-private",
+      "title": "Chitwan",
+      "scene": "chitwan"
+    },
+    {
+      "journey": "nepal-in-private",
+      "title": "Departure",
+      "scene": "kathmandu"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "Jaipur",
+      "scene": "jaipur"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "Shekhawati",
+      "scene": "shekhawati"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "The Thar Desert",
+      "scene": "thar-desert"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "Jodhpur",
+      "scene": "jodhpur"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "Udaipur",
+      "scene": "udaipur"
+    },
+    {
+      "journey": "rajasthan-luxury",
+      "title": "Departure",
+      "scene": "udaipur"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "The Cultural Triangle",
+      "scene": "sigiriya"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "Kandy",
+      "scene": "kandy"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "Tea country",
+      "scene": "tea-country"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "Yala",
+      "scene": "yala"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "Galle and the south coast",
+      "scene": "galle"
+    },
+    {
+      "journey": "sri-lanka-in-style",
+      "title": "Departure",
+      "scene": "colombo"
+    }
+  ]
+}

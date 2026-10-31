@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   images: {
+    qualities: [75, 90],
+    deviceSizes: [640, 750, 828, 1080, 1280, 1440, 1600, 1920, 2048, 2560, 2880, 3840],
+    localPatterns: [
+      { pathname: "/**", search: "" },
+      { pathname: "/images/travel-film-poster.webp", search: "?v=20261006-clean" },
+    ],
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "plus.unsplash.com" },

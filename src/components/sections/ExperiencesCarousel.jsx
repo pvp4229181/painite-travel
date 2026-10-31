@@ -66,7 +66,7 @@ export default function ExperiencesCarousel({ experiences }) {
       </div>
     </div>
     {count > 2 && <div className="mt-5 flex items-center justify-between gap-4">
-      <p className="text-xs text-ivory/70" aria-live={focused || reducedMotion ? "polite" : "off"}>
+      <p className="text-xs text-ivory/70" aria-live={focused ? "polite" : "off"}>
         {index % count + 1} / {count} experiences
       </p>
       <div className="flex gap-2">

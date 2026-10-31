@@ -12,6 +12,7 @@ import { experiences as starterExperiences } from "@/data/experiences";
 import { journal as starterArticles } from "@/data/journal";
 import { journeys as starterJourneys } from "@/data/journeys";
 import connectDB, { isDbConfigured } from "@/utils/db";
+import { contentScene, withJourneyImages } from "@/lib/content-images";
 
 // After a failed connection, skip the database briefly instead of waiting on
 // a timeout for every page (matters during builds with an unreachable DB).
@@ -66,11 +67,24 @@ export const getDestinations = cache(async () => {
   const regions = await Region.find({ destination: { $in: data.map((d) => d.slug) } })
     .sort({ order: 1 })
     .lean();
-  return data.map((d) => ({
-    ...d,
-    experiences: d.experiences ?? [],
-    regions: regions.filter((r) => r.destination === d.slug).map(toPlain),
-  }));
+  return data.map((d) => {
+    // Existing database records use the original shared artwork keys.
+    const previousScenes = {
+      india: ["desert", "heritage"],
+      nepal: ["himalaya"],
+      bhutan: ["himalaya"],
+      "sri-lanka": ["tea", "wellness"],
+      maldives: ["ocean", "island"],
+    }[d.slug] ?? [];
+    return {
+      ...d,
+      scene: previousScenes.includes(d.scene) ? d.slug : d.scene,
+      cardScene: previousScenes.includes(d.cardScene) ? d.slug : d.cardScene,
+      homeScene: previousScenes.includes(d.homeScene) ? d.slug : d.homeScene,
+      experiences: d.experiences ?? [],
+      regions: regions.filter((r) => r.destination === d.slug).map(toPlain),
+    };
+  });
 });
 
 export async function getDestination(slug) {
@@ -83,7 +97,7 @@ export const getJourneys = cache(async () => {
     () => Tour.find({ published: true }).sort({ order: 1, title: 1 }).lean(),
     starterJourneys,
   );
-  return data;
+  return data.map(withJourneyImages);
 });
 
 export async function getJourney(slug) {
@@ -113,7 +127,7 @@ export const getArticles = cache(async () => {
     () => Article.find({ published: true }).sort({ date: -1 }).lean(),
     [...starterArticles].sort((a, b) => b.date.localeCompare(a.date)),
   );
-  return data;
+  return data.map(article => ({ ...article, scene: contentScene(article) }));
 });
 
 export async function getArticle(slug) {

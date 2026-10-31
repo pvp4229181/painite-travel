@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const EASE = [0.22, 1, 0.36, 1];
 
@@ -15,19 +15,10 @@ export const fadeIn = {
 };
 
 export function Reveal({ children, as = "div", delay = 0, className, variants = fadeUp, amount = 0.2, ...rest }) {
-  const reduce = useReducedMotion();
   const Comp = motion[as] ?? motion.div;
-  if (reduce) {
-    const Plain = as;
-    return (
-      <Plain className={className} {...rest}>
-        {children}
-      </Plain>
-    );
-  }
   return (
     <Comp
-      className={className}
+      className={`${className ?? ""} motion-reveal`}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount }}

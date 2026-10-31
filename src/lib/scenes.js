@@ -1,7 +1,8 @@
-// Maps a "scene" key stored on content to an artwork file in /public/images/ai.
+// Maps scene keys to the locally hosted, reference-inspired 2K travel artwork.
 // Older keys (desert, lagoon, ...) are kept as aliases so existing content keeps working.
 // A scene can also be the URL of an image uploaded through the admin, used as is.
 import { isUploadedMedia } from "./media.js";
+import { placeImages } from "./content-images.js";
 
 export const sceneImages = {
   hero: "hero",
@@ -11,7 +12,11 @@ export const sceneImages = {
   wildlife: "wildlife",
   gastronomy: "gastronomy",
   island: "island",
-  bhutan: "himalaya",
+  india: "india",
+  nepal: "nepal",
+  bhutan: "bhutan",
+  "sri-lanka": "sri-lanka",
+  maldives: "maldives",
   desert: "heritage",
   golden: "heritage",
   lake: "heritage",
@@ -25,26 +30,38 @@ export const sceneImages = {
 
 // The images an editor can choose from in the admin.
 export const imageOptions = [
-  { key: "hero", label: "Moonlit ridge" },
+  { key: "hero", label: "Lake Pichola sunset" },
   { key: "himalaya", label: "Himalaya" },
   { key: "heritage", label: "Heritage sunset" },
-  { key: "wellness", label: "Green hills" },
-  { key: "wildlife", label: "Misty forest" },
-  { key: "gastronomy", label: "Golden valley" },
+  { key: "wellness", label: "Kerala backwaters" },
+  { key: "wildlife", label: "Bengal tiger" },
+  { key: "gastronomy", label: "Indian cuisine" },
   { key: "island", label: "Island lagoon" },
+  { key: "india", label: "Taj Mahal" },
+  { key: "nepal", label: "Nepal Himalayas" },
+  { key: "bhutan", label: "Bhutan monastery" },
+  { key: "sri-lanka", label: "Sri Lanka tea country" },
+  { key: "maldives", label: "Maldives island" },
+  ...Object.entries(placeImages).map(([key, image]) => ({ key, label: image.label })),
 ];
 
 export function imageFor(scene) {
   if (isUploadedMedia(scene)) return scene;
+  if (placeImages[scene]) return scene;
   return sceneImages[scene] || "hero";
 }
 
 export function imageSrc(scene) {
   if (isUploadedMedia(scene)) return scene;
-  return `/images/ai/${imageFor(scene)}.webp`;
+  const key = imageFor(scene);
+  if (placeImages[key]) return placeImages[key].src;
+  if (["india", "nepal", "bhutan", "sri-lanka", "maldives"].includes(key)) {
+    return `/images/themed-2k/destinations/${key}.webp`;
+  }
+  return `/images/themed-2k/scenes/${key}.webp`;
 }
 
 export function normalizeScene(scene) {
   if (isUploadedMedia(scene)) return scene;
-  return sceneImages[scene] ? imageFor(scene) : "hero";
+  return sceneImages[scene] || placeImages[scene] ? imageFor(scene) : "hero";
 }

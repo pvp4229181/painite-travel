@@ -35,6 +35,7 @@ export default async function sitemap() {
     page("/journal", 0.7, "weekly"),
     page("/privacy", 0.2, "yearly"),
     page("/terms", 0.2, "yearly"),
+    page("/photo-credits", 0.2, "yearly"),
     ...serviceDetails.map((s) => page(`/services/${s.slug}`, 0.7)),
     ...destinations.map((d) => page(`/destinations/${d.slug}`, 0.9)),
     ...journeys.map((j) => page(`/journeys/${j.slug}`, 0.8)),

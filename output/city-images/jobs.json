@@ -1,0 +1,142 @@
+[
+  {
+    "key": "delhi",
+    "label": "Delhi",
+    "alt": "India Gate and the broad tree-lined ceremonial boulevard in New Delhi",
+    "outputPath": "cities/delhi",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: India Gate and the broad tree-lined ceremonial boulevard in New Delhi, recognizable red sandstone triumphal arch, green lawns and warm morning light. Show Delhi?s actual urban landmark, not a lake palace. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "old-delhi",
+    "label": "Old Delhi",
+    "alt": "Jama Masjid in Old Delhi with its recognizable red sandstone facade",
+    "outputPath": "cities/old-delhi",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Jama Masjid in Old Delhi with its recognizable red sandstone facade, three marble domes and tall minarets above a lively but tasteful old-city street, soft early morning light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "agra",
+    "label": "Agra",
+    "alt": "The authentic red sandstone walls and Amar Singh Gate of Agra Fort in Agra",
+    "outputPath": "cities/agra",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The authentic red sandstone walls and Amar Singh Gate of Agra Fort in Agra, Mughal architecture with finely detailed stonework and a quiet elegant morning atmosphere. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "jaipur",
+    "label": "Jaipur",
+    "alt": "The iconic pink sandstone Hawa Mahal facade in Jaipur",
+    "outputPath": "cities/jaipur",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The iconic pink sandstone Hawa Mahal facade in Jaipur, its distinctive tiered honeycomb of small jharokha windows, warm morning sunlight and a clear view from the old-city street. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "fatehpur-sikri",
+    "label": "Fatehpur Sikri",
+    "alt": "The red sandstone Mughal courtyard and tiered Panch Mahal pavilion at Fatehpur Sikri near Agra",
+    "outputPath": "cities/fatehpur-sikri",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The red sandstone Mughal courtyard and tiered Panch Mahal pavilion at Fatehpur Sikri near Agra, finely carved columns, open stone paving, warm golden light and historically credible architecture. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "shekhawati",
+    "label": "Shekhawati",
+    "alt": "A traditional fresco-painted haveli courtyard in Mandawa in the Shekhawati region of Rajasthan",
+    "outputPath": "cities/shekhawati",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: A traditional fresco-painted haveli courtyard in Mandawa in the Shekhawati region of Rajasthan, authentic painted merchant mansion walls, delicate arches and weathered natural pigments in warm afternoon light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "thar-desert",
+    "label": "Thar Desert",
+    "alt": "The rolling golden sand dunes of the Thar Desert near Jaisalmer",
+    "outputPath": "cities/thar-desert",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The rolling golden sand dunes of the Thar Desert near Jaisalmer, wind-sculpted sand patterns and a small distant camel caravan at sunset, expansive quiet desert sky. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "jodhpur",
+    "label": "Jodhpur",
+    "alt": "Mehrangarh Fort rising above the tightly clustered blue houses of Jodhpur",
+    "outputPath": "cities/jodhpur",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Mehrangarh Fort rising above the tightly clustered blue houses of Jodhpur, authentic Rajasthan cliff-top fortress and indigo old-city rooftops in warm late afternoon light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "kochi",
+    "label": "Fort Kochi",
+    "alt": "The distinctive cantilevered Chinese fishing nets on Fort Kochi?s waterfront in Kerala",
+    "outputPath": "cities/kochi",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The distinctive cantilevered Chinese fishing nets on Fort Kochi?s waterfront in Kerala, traditional wooden structures against calm harbor water at golden hour, coconut palms and coastal atmosphere. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "munnar",
+    "label": "Munnar",
+    "alt": "Munnar in Kerala?s Western Ghats",
+    "outputPath": "cities/munnar",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Munnar in Kerala?s Western Ghats, lush rolling tea plantations with narrow paths curving across green hills, misty mountain layers and natural soft morning sunlight. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "kovalam",
+    "label": "Kovalam",
+    "alt": "Kovalam Lighthouse Beach in Kerala",
+    "outputPath": "cities/kovalam",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Kovalam Lighthouse Beach in Kerala, the recognizable red-and-white striped lighthouse on its rocky headland above a crescent beach, coconut palms and turquoise Arabian Sea water in gentle late afternoon light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "thiruvananthapuram",
+    "label": "Thiruvananthapuram",
+    "alt": "The authentic ornate gopuram of Sree Padmanabhaswamy Temple viewed across its temple tank in Thiruvananthapuram",
+    "outputPath": "cities/thiruvananthapuram",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: The authentic ornate gopuram of Sree Padmanabhaswamy Temple viewed across its temple tank in Thiruvananthapuram, Kerala, traditional rooflines and calm water in warm natural light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "kandy",
+    "label": "Kandy",
+    "alt": "Kandy Lake and the traditional white exterior of the Temple of the Sacred Tooth Relic in Kandy",
+    "outputPath": "cities/kandy",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Kandy Lake and the traditional white exterior of the Temple of the Sacred Tooth Relic in Kandy, Sri Lanka, green hills, temple roof details and calm late afternoon reflections. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "colombo",
+    "label": "Colombo",
+    "alt": "Colombo?s Galle Face waterfront with the historic old Parliament building and the modern Sri Lankan city skyline",
+    "outputPath": "cities/colombo",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Colombo?s Galle Face waterfront with the historic old Parliament building and the modern Sri Lankan city skyline, Indian Ocean coastline, tropical greenery and soft golden evening light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "dhulikhel",
+    "label": "Dhulikhel",
+    "alt": "Dhulikhel in Nepal",
+    "outputPath": "cities/dhulikhel",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Dhulikhel in Nepal, a quiet Newari hill town on green terraced ridges with layered Himalayan mountains in the distance, traditional brick and timber houses and clear early morning light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "gangtey",
+    "label": "Gangtey",
+    "alt": "Gangtey Goenpa monastery on its real ridge overlooking the broad green U-shaped Phobjikha Valley in Bhutan",
+    "outputPath": "cities/gangtey",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Gangtey Goenpa monastery on its real ridge overlooking the broad green U-shaped Phobjikha Valley in Bhutan, traditional white walls and dark red timber, distant forests and soft morning mist. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "male",
+    "label": "Malé",
+    "alt": "An aerial view of the compact island city of Malé in the Maldives",
+    "outputPath": "cities/male",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: An aerial view of the compact island city of Mal? in the Maldives, its dense colorful rooftops, recognizable golden-domed Islamic Centre and blue surrounding Indian Ocean, natural clear tropical light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "kathmandu",
+    "label": "Kathmandu",
+    "alt": "Boudhanath Stupa in Kathmandu",
+    "outputPath": "cities/kathmandu",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Boudhanath Stupa in Kathmandu, Nepal, its distinctive great white dome, golden spire and painted Buddha eyes, prayer flags and surrounding traditional city buildings in soft morning light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "bhaktapur",
+    "label": "Bhaktapur",
+    "alt": "Nyatapola Temple and Taumadhi Square in Bhaktapur",
+    "outputPath": "cities/bhaktapur",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Nyatapola Temple and Taumadhi Square in Bhaktapur, Nepal, the recognizable five-tiered pagoda on its stepped brick platform, traditional Newari buildings and warm early morning light. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  },
+  {
+    "key": "paro",
+    "label": "Paro",
+    "alt": "Rinpung Dzong above the Paro Chhu river and its traditional covered wooden bridge in Paro",
+    "outputPath": "cities/paro",
+    "prompt": "Use case: photorealistic-natural. Create a realistic luxury travel editorial photograph of this specific named city or location. Subject: Rinpung Dzong above the Paro Chhu river and its traditional covered wooden bridge in Paro, Bhutan, authentic white fortress walls and red timber roofs, green valley and clear natural daylight. Geographic and landmark accuracy is essential: depict the named place?s recognizable architecture and setting, without substituting a generic palace, lake, resort or a different city. Match the Painite website aesthetic: warm natural light, rich but restrained colors, forest greens, ivory and sandstone tones where appropriate, crisp photographic textures, believable optics and elegant composition. Landscape 3:2 composition, with the principal landmark comfortably centered and generous surroundings for responsive thumbnail cropping. No fantasy buildings, illustration, CGI gloss, artificial neon colors, oversharpening, text overlays, watermarks, logos, borders or UI. Generate at the highest supported native detail; the final file will be a 2K export with a 2048-pixel long edge. Return the saved local file path."
+  }
+]

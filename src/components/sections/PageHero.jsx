@@ -10,7 +10,7 @@ export default function PageHero({ scene, video, sun, eyebrow, title, subtitle, 
     <section
       className={cn("relative isolate flex min-h-[560px] flex-col overflow-hidden text-ivory md:min-h-[620px]", className)}
     >
-      <Landscape scene={scene} video={video} sun={sun} shade={defaultShade} className="-z-10" />
+      <Landscape scene={scene} video={video} sun={sun} sizes="100vw" priority shade={defaultShade} className="-z-10" />
       <div className="container-luxe flex flex-1 flex-col justify-end pt-32 pb-12 md:pb-14">
         {eyebrow && (
           <p className="eyebrow rise mb-3 text-ivory/75">

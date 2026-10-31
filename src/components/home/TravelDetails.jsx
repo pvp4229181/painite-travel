@@ -39,7 +39,7 @@ export function ServicesPreview() {
         </div>
         <div className="services-preview-layout">
           <aside className="services-care-panel">
-            <Image src="/images/ai/services-hospitality.png" alt="A hotel host warmly welcoming guests with refreshments at a luxury heritage hotel" fill sizes="(min-width: 1024px) 40vw, 100vw" className="services-curator-image" />
+            <Image quality={90} src="/images/themed-2k/scenes/services-hospitality.webp" alt="An elegant heritage haveli courtyard in Jaipur" fill sizes="(min-width: 1024px) 40vw, 100vw" className="services-curator-image" />
             <div className="services-curator-shade" aria-hidden="true" />
             <div className="services-curator-caption">
               <p className="eyebrow text-gold-soft">PERSONAL SERVICE, AT EVERY STEP</p>

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 // The Painite Travels logo (white lettering, for dark backgrounds), from painitetravels.com.
 export function LogoMark({ className, priority = false }) {
   return (
-    <Image
+    <Image quality={90}
       src="/brand/logo-header.png"
       alt="Painite Travels, Curator of Exceptional Journeys"
       width={320}

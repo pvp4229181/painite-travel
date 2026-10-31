@@ -56,12 +56,12 @@ export default function Gallery({ items = [], title = "Gallery", eyebrow = "In p
                 className="group relative block aspect-[4/3] h-full w-full overflow-hidden bg-ink text-left"
                 aria-label={`Open ${item.type === "video" ? "video" : "photo"} ${i + 1} of ${count}${item.caption ? `: ${item.caption}` : ""}`}
               >
-                <Image
-                  src={mediaThumb(item.url, i === 0 && count >= 3 ? 1200 : 800, i === 0 && count >= 3 ? 900 : 600)}
+                <Image quality={90}
+                  src={item.type === "video" ? mediaThumb(item.url, 1600, 1200) : item.url}
                   alt={item.caption || ""}
                   fill
-                  unoptimized
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  unoptimized={item.type === "video"}
+                  sizes={i === 0 && count >= 3 ? "(max-width: 768px) 100vw, (min-width: 1280px) 800px, 67vw" : "(max-width: 768px) 50vw, (min-width: 1280px) 400px, 33vw"}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {item.type === "video" && (
@@ -108,7 +108,7 @@ export default function Gallery({ items = [], title = "Gallery", eyebrow = "In p
               <video key={current.url} src={videoSrc(current.url)} controls autoPlay playsInline className="max-h-full max-w-full" />
             ) : (
               <div className="relative h-full w-full">
-                <Image key={current.url} src={mediaImage(current.url, 2000)} alt={current.caption || ""} fill unoptimized sizes="100vw" className="object-contain" />
+                <Image quality={90} key={current.url} src={mediaImage(current.url)} alt={current.caption || ""} fill unoptimized sizes="100vw" className="object-contain" />
               </div>
             )}
             {count > 1 && (

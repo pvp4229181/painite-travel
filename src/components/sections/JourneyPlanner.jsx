@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export default function JourneyPlanner({ destinations, experiences, defaultDestination, defaultExperience, journey }) {
   return <div className="journey-planner">
     <section className="planner-hero">
-      <Image src="/images/ai/island.webp" alt="A peaceful island resort at sunset" fill priority sizes="100vw" className="object-cover" />
+      <Image quality={90} src="/images/themed-2k/scenes/island.webp" alt="A palm-lined beach and turquoise water in the Maldives" fill priority sizes="100vw" className="object-cover" />
       <div className="planner-hero-shade" aria-hidden="true" />
       <div className="container-luxe"><Link href="/" className="planner-breadcrumb">PAINITE TRAVELS <span>/</span> PLAN YOUR JOURNEY</Link><p className="eyebrow">LET YOUR NEXT CHAPTER BEGIN</p><h1>A little inspiration.<br /><em>A journey entirely yours.</em></h1><p>Tell us what you are dreaming of. We will take care of the details.</p></div>
     </section>
@@ -15,7 +15,7 @@ export default function JourneyPlanner({ destinations, experiences, defaultDesti
       <aside className="planner-sidebar">
         <p className="eyebrow text-terracotta">TRAVEL STARTS WITH A CONVERSATION</p><h2>Real people.<br />Remarkable journeys.</h2>
         <p className="planner-sidebar-intro">Your enquiry goes to a dedicated curator who knows our destinations first-hand. Share a few ideas, and we will shape the possibilities together.</p>
-        <div className="planner-curator-photo"><Image src="/images/ai/customer-enquiry.png" alt="A Painite-style travel consultation with guests" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" /></div>
+        <div className="planner-curator-photo"><Image quality={90} src="/images/themed-2k/scenes/customer-enquiry.webp" alt="Maps, field notes and a camera ready for travel" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" /></div>
         <ol className="planner-next-steps">{[{title:"We listen",text:"Your curator replies personally within 24 hours."},{title:"We create",text:"A considered proposal, shaped around your interests."},{title:"We refine",text:"Together, we make the details feel right."}].map((step,i)=><li key={step.title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         <div className="planner-direct"><p className="eyebrow">PREFER TO SPEAK DIRECTLY?</p><a href={site.phoneHref}><Phone size={17} />{site.phone}<ArrowUpRight size={15} /></a><a href={`mailto:${site.email}`}><Mail size={17} />{site.email}<ArrowUpRight size={15} /></a><a href={`https://wa.me/${site.phoneHref.replace(/\D/g, "")}`} target="_blank" rel="noreferrer"><MessageCircle size={17} />Chat on WhatsApp<ArrowUpRight size={15} /></a></div>
       </aside>

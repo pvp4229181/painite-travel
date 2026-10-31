@@ -46,7 +46,7 @@ export default function Itinerary({ days }) {
                 >
                   <div className="grid gap-5 pb-7 sm:grid-cols-[8.5rem_1fr] sm:pl-[5.5rem] md:gap-6">
                     <div className="relative aspect-[3/2] w-full max-w-[12rem] overflow-hidden sm:max-w-none">
-                      <Landscape scene={d.scene} />
+                      <Landscape scene={d.scene} sizes="(min-width: 640px) 136px, 192px" />
                     </div>
                     <div className="text-[13.5px] leading-[1.75] text-muted">
                       <p>{d.text}</p>

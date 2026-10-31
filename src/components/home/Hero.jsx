@@ -10,11 +10,11 @@ import { videoSrc } from "@/lib/media";
 
 const countryOrder = ["india", "nepal", "bhutan", "sri-lanka", "maldives"];
 
-// A video uploaded in the admin wins; otherwise the built-in file in /public/videos/hero, if any.
+// An editor-supplied video wins; otherwise use the existing destination film.
 function heroVideo(destination) {
   if (destination.video) return videoSrc(destination.video);
   if (!countryOrder.includes(destination.slug)) return null;
-  return `/videos/hero/${destination.slug}.mp4${destination.slug === "india" ? "?v=2" : ""}`;
+  return `/videos/hero/${destination.slug}.mp4?v=20261006-clean`;
 }
 
 export default function Hero({ destinations: suppliedDestinations = starterDestinations }) {
@@ -74,8 +74,8 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
         exit={{ opacity: 0, zIndex: 0 }}
         transition={{ duration: reducedMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}>
 
-        <Landscape scene={destination.homeScene || destination.scene} priority />
-        {!reducedMotion && heroVideo(destination) && <video
+        <Landscape scene={destination.homeScene || destination.scene} sizes="100vw" priority />
+        {heroVideo(destination) && <video
           ref={heroVideoRef}
           src={heroVideo(destination)}
           autoPlay
@@ -84,7 +84,7 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
           playsInline
           preload="metadata"
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
         />}
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg,rgba(5,20,16,.68),rgba(5,20,16,.08) 80%),linear-gradient(180deg,rgba(5,20,16,.48),transparent 35%,rgba(5,20,16,.85))" }} />
       </motion.div>
@@ -114,7 +114,7 @@ export default function Hero({ destinations: suppliedDestinations = starterDesti
         <div ref={photoStrip} className="hero-photo-strip relative flex gap-3 overflow-x-auto py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {[...destinations, ...destinations, ...destinations].map((item, position) => <button type="button" key={`${item.slug}-${position}`} aria-hidden={position < destinations.length || position >= destinations.length * 2 ? true : undefined} tabIndex={position < destinations.length || position >= destinations.length * 2 ? -1 : 0} aria-label={`Show ${item.name}`} aria-pressed={position % destinations.length === active} onClick={() => selectDestination(position % destinations.length)} className={`group relative isolate flex shrink-0 h-[290px] w-[200px] items-end overflow-hidden border p-4 text-left xl:h-[320px] xl:w-[220px] ${position % destinations.length === active ? "border-gold-soft" : "border-ivory/25"}`}>
             <div className="absolute inset-0 -z-10 overflow-hidden">
-              <Landscape scene={item.homeScene || item.scene} shade />
+              <Landscape scene={item.homeScene || item.scene} sizes="146px" shade />
             </div>
             <span className="font-serif text-3xl">{item.name}</span>
           </button>)}

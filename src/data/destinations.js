@@ -5,8 +5,8 @@ export const destinations = [
     tagline: "Not one journey, but thousands of them.",
     heroLine: "The extraordinary, in all its contradictions.",
     homeLine: "The extraordinary, in all its contradictions.",
-    scene: "desert",
-    cardScene: "desert",
+    scene: "india",
+    cardScene: "india",
     homeScene: "hero",
     introTitle: "A land of timeless stories",
     introText:
@@ -31,8 +31,8 @@ export const destinations = [
     tagline: "The Himalaya, experienced privately.",
     heroLine: "The Himalaya, experienced privately.",
     homeLine: "The Himalaya, experienced privately.",
-    scene: "himalaya",
-    cardScene: "himalaya",
+    scene: "nepal",
+    cardScene: "nepal",
     introTitle: "Where the mountains keep time",
     introText:
       "Medieval squares in the Kathmandu Valley, prayer flags above Himalayan ridgelines and quiet lodges with the world's highest peaks at the window. Nepal rewards those who travel slowly.",
@@ -81,8 +81,8 @@ export const destinations = [
     tagline: "An island of remarkable contrasts.",
     heroLine: "An island of remarkable contrasts.",
     homeLine: "An island of remarkable contrasts.",
-    scene: "tea",
-    cardScene: "tea",
+    scene: "sri-lanka",
+    cardScene: "sri-lanka",
     introTitle: "So much, so close together",
     introText:
       "Ancient rock citadels, misted tea country, leopards in the dry-zone forests and a southern coast of colonial forts and quiet bays, all within a few hours of each other.",
@@ -106,8 +106,8 @@ export const destinations = [
     tagline: "The Indian Ocean, privately.",
     heroLine: "The Indian Ocean, privately.",
     homeLine: "The Indian Ocean, privately.",
-    scene: "ocean",
-    cardScene: "ocean",
+    scene: "maldives",
+    cardScene: "maldives",
     introTitle: "Barefoot, and nowhere to be",
     introText:
       "Twelve hundred coral islands scattered across the equator. We match you to the right atoll and the right island for the way you like to rest, dive, celebrate or simply disappear.",
