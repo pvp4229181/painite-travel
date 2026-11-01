@@ -30,7 +30,7 @@ for (const journey of journeys) {
 }
 const taj = journal.find(article => article.slug === "the-taj-at-first-light");
 assert.equal(contentScene(taj), "taj-mahal");
-assert.equal(imageSrc(contentScene(taj)), "/images/themed-2k/destinations/india.webp");
+assert.equal(imageSrc(contentScene(taj)), "/images/cleaned/destinations/india.webp");
 assert.equal(contentScene({ title: "Best Safari Experiences in Sri Lanka", category: "Sri Lanka", scene: "wildlife" }), "yala");
 assert.equal(contentScene({ title: "A quiet escape", scene: "wellness" }), "wellness");
 assert.equal(itineraryScene({ title: "The Taj Mahal", stay: "Hotel in Jaipur", scene: "heritage" }, {}), "taj-mahal");

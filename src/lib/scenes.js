@@ -1,4 +1,4 @@
-// Maps scene keys to the locally hosted, reference-inspired 2K travel artwork.
+// Maps scene keys to the locally hosted, owner-supplied 2K travel artwork.
 // Older keys (desert, lagoon, ...) are kept as aliases so existing content keeps working.
 // A scene can also be the URL of an image uploaded through the admin, used as is.
 import { isUploadedMedia } from "./media.js";
@@ -56,9 +56,9 @@ export function imageSrc(scene) {
   const key = imageFor(scene);
   if (placeImages[key]) return placeImages[key].src;
   if (["india", "nepal", "bhutan", "sri-lanka", "maldives"].includes(key)) {
-    return `/images/themed-2k/destinations/${key}.webp`;
+    return `/images/cleaned/destinations/${key}.webp`;
   }
-  return `/images/themed-2k/scenes/${key}.webp`;
+  return `/images/cleaned/scenes/${key}.webp`;
 }
 
 export function normalizeScene(scene) {

@@ -1,10 +1,10 @@
 import cities from "../data/city-images.json" with { type: "json" };
 import { isUploadedMedia } from "./media.js";
 
-const region = (key, label) => ({ src: `/images/themed-2k/regions/${key}.webp`, label });
+const region = (key, label) => ({ src: `/images/cleaned/regions/${key}.webp`, label });
 export const placeImages = {
-  "taj-mahal": { src: "/images/themed-2k/destinations/india.webp", label: "Taj Mahal, Agra" },
-  udaipur: { src: "/images/themed-2k/scenes/heritage.webp", label: "Udaipur" },
+  "taj-mahal": { src: "/images/cleaned/destinations/india.webp", label: "Taj Mahal, Agra" },
+  udaipur: { src: "/images/cleaned/scenes/heritage.webp", label: "Udaipur" },
   rajasthan: region("rajasthan", "Rajasthan"),
   kerala: region("kerala", "Kerala backwaters"),
   varanasi: region("varanasi", "Varanasi"),

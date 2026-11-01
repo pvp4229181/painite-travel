@@ -4,10 +4,20 @@ import sharp from "sharp";
 
 const photos = JSON.parse(await fs.readFile("src/data/photography.json", "utf8"));
 assert.equal(photos.length, 39, "Every built-in photograph needs a credit");
-assert.equal(new Set(photos.map(p => p.source)).size, photos.length, "Use distinct source photographs");
+assert.equal(new Set(photos.map(p => p.key)).size, photos.length, "Every image placement needs a unique key");
 const checks = [];
 for (const photo of photos) {
-  assert.match(photo.src, /^\/images\/(?:photos|themed-2k)\/[\w/-]+\.webp$/);
+  assert.match(photo.src, /^\/images\/(?:photos|themed-2k|selected|cleaned)\/[\w/-]+\.webp$/);
+  if (photo.kind === "user-provided-ai") {
+    const metadata = await sharp(`public${photo.src}`).metadata();
+    assert.equal(metadata.width, photo.width, photo.key);
+    assert.equal(metadata.height, photo.height, photo.key);
+    assert.equal(Math.max(metadata.width, metadata.height), 2048, photo.key);
+    assert.equal(photo.generator, "Gemini");
+    assert.ok(photo.originalFilename.endsWith(".png"));
+    checks.push({ key: photo.key, width: metadata.width, height: metadata.height, generator: photo.generator });
+    continue;
+  }
   assert.ok(photo.author.trim(), `${photo.key}: photographer credit is required`);
   assert.match(photo.license, /^(Pexels License|CC BY(?:-SA)? [1-4]\.0|CC0|Public domain)$/);
   assert.ok(["www.pexels.com", "commons.wikimedia.org"].includes(new URL(photo.source).hostname));
@@ -26,5 +36,5 @@ for (const photo of photos) {
   checks.push({ key: photo.key, width: metadata.width, height: metadata.height, nativeWidth: photo.nativeWidth, nativeHeight: photo.nativeHeight, upscaled: photo.upscaled, license: photo.license, source: photo.source });
 }
 const reportDirectory = photos.every(photo => photo.kind === "ai-recreation") ? "output/themed-2k" : "output/photo-refresh";
-await fs.writeFile(`${reportDirectory}/asset-checks.json`, `${JSON.stringify({ photos: photos.length, uniqueSources: photos.length, pexels: photos.filter(p => p.license === "Pexels License").length, commons: photos.filter(p => p.license !== "Pexels License").length, allAuthorsPresent: true, allDimensionsMatch: true, checks }, null, 2)}\n`);
-console.log(`Verified ${photos.length} distinct, credited website images.`);
+await fs.writeFile(`${reportDirectory}/asset-checks.json`, `${JSON.stringify({ photos: photos.length, uniqueSources: new Set(photos.map(p => p.source || p.originalFilename)).size, suppliedImages: photos.filter(p => p.kind === "user-provided-ai").length, allDimensionsMatch: true, checks }, null, 2)}\n`);
+console.log(`Verified ${photos.length} website image placements and their dimensions.`);

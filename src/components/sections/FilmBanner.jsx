@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Reveal } from "@/lib/motion";
 
 const filmSrc = "/videos/painite-travel-film.mp4?v=20261006-clean";
-const poster = "/images/themed-2k/travel-film-poster.webp";
+const poster = "/images/cleaned/destinations/maldives.webp";
 
 export default function FilmBanner() {
   const sectionRef = useRef(null);

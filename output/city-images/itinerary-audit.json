@@ -4,342 +4,342 @@
     "day": "1",
     "title": "Arrival in Kathmandu",
     "scene": "kathmandu",
-    "src": "/images/themed-2k/cities/kathmandu.webp"
+    "src": "/images/cleaned/cities/kathmandu.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "2",
     "title": "Kathmandu's cultural treasures",
     "scene": "kathmandu",
-    "src": "/images/themed-2k/cities/kathmandu.webp"
+    "src": "/images/cleaned/cities/kathmandu.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "3",
     "title": "Bhaktapur and Patan",
     "scene": "bhaktapur",
-    "src": "/images/themed-2k/cities/bhaktapur.webp"
+    "src": "/images/cleaned/cities/bhaktapur.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "4",
     "title": "Into the mountains",
     "scene": "dhulikhel",
-    "src": "/images/themed-2k/cities/dhulikhel.webp"
+    "src": "/images/cleaned/cities/dhulikhel.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "5 to 6",
     "title": "Pokhara and the Annapurnas",
     "scene": "pokhara",
-    "src": "/images/themed-2k/regions/pokhara.webp"
+    "src": "/images/cleaned/regions/pokhara.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "7 to 8",
     "title": "Chitwan National Park",
     "scene": "chitwan",
-    "src": "/images/themed-2k/regions/chitwan.webp"
+    "src": "/images/cleaned/regions/chitwan.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "9",
     "title": "Return to Kathmandu",
     "scene": "kathmandu",
-    "src": "/images/themed-2k/cities/kathmandu.webp"
+    "src": "/images/cleaned/cities/kathmandu.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "10",
     "title": "Fly to Paro, Bhutan",
     "scene": "paro",
-    "src": "/images/themed-2k/cities/paro.webp"
+    "src": "/images/cleaned/cities/paro.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "11 to 12",
     "title": "Thimphu",
     "scene": "thimphu",
-    "src": "/images/themed-2k/regions/thimphu.webp"
+    "src": "/images/cleaned/regions/thimphu.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "13 to 14",
     "title": "Punakha",
     "scene": "punakha",
-    "src": "/images/themed-2k/regions/punakha.webp"
+    "src": "/images/cleaned/regions/punakha.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "15 to 16",
     "title": "Gangtey and the Phobjikha Valley",
     "scene": "gangtey",
-    "src": "/images/themed-2k/cities/gangtey.webp"
+    "src": "/images/cleaned/cities/gangtey.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "17",
     "title": "Tiger's Nest",
     "scene": "tigers-nest",
-    "src": "/images/themed-2k/regions/paro.webp"
+    "src": "/images/cleaned/regions/paro.webp"
   },
   {
     "journey": "himalayan-kingdoms",
     "day": "18",
     "title": "Departure",
     "scene": "paro",
-    "src": "/images/themed-2k/cities/paro.webp"
+    "src": "/images/cleaned/cities/paro.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "1",
     "title": "Arrival in Delhi",
     "scene": "delhi",
-    "src": "/images/themed-2k/cities/delhi.webp"
+    "src": "/images/cleaned/cities/delhi.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "2",
     "title": "Old and New Delhi",
     "scene": "old-delhi",
-    "src": "/images/themed-2k/cities/old-delhi.webp"
+    "src": "/images/cleaned/cities/old-delhi.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "3",
     "title": "To Agra",
     "scene": "agra",
-    "src": "/images/themed-2k/cities/agra.webp"
+    "src": "/images/cleaned/cities/agra.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "4",
     "title": "The Taj Mahal at sunrise",
     "scene": "taj-mahal",
-    "src": "/images/themed-2k/destinations/india.webp"
+    "src": "/images/cleaned/destinations/india.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "5",
     "title": "Fatehpur Sikri to Jaipur",
     "scene": "fatehpur-sikri",
-    "src": "/images/themed-2k/cities/fatehpur-sikri.webp"
+    "src": "/images/cleaned/cities/fatehpur-sikri.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "6",
     "title": "Jaipur",
     "scene": "jaipur",
-    "src": "/images/themed-2k/cities/jaipur.webp"
+    "src": "/images/cleaned/cities/jaipur.webp"
   },
   {
     "journey": "india-golden-triangle",
     "day": "7",
     "title": "Departure",
     "scene": "jaipur",
-    "src": "/images/themed-2k/cities/jaipur.webp"
+    "src": "/images/cleaned/cities/jaipur.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "1 to 3",
     "title": "Jaipur",
     "scene": "jaipur",
-    "src": "/images/themed-2k/cities/jaipur.webp"
+    "src": "/images/cleaned/cities/jaipur.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "4 to 5",
     "title": "Shekhawati",
     "scene": "shekhawati",
-    "src": "/images/themed-2k/cities/shekhawati.webp"
+    "src": "/images/cleaned/cities/shekhawati.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "6 to 7",
     "title": "The Thar Desert",
     "scene": "thar-desert",
-    "src": "/images/themed-2k/cities/thar-desert.webp"
+    "src": "/images/cleaned/cities/thar-desert.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "8 to 9",
     "title": "Jodhpur",
     "scene": "jodhpur",
-    "src": "/images/themed-2k/cities/jodhpur.webp"
+    "src": "/images/cleaned/cities/jodhpur.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "10 to 11",
     "title": "Udaipur",
     "scene": "udaipur",
-    "src": "/images/themed-2k/scenes/heritage.webp"
+    "src": "/images/cleaned/scenes/heritage.webp"
   },
   {
     "journey": "rajasthan-luxury",
     "day": "12",
     "title": "Departure",
     "scene": "udaipur",
-    "src": "/images/themed-2k/scenes/heritage.webp"
+    "src": "/images/cleaned/scenes/heritage.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "1 to 3",
     "title": "The Cultural Triangle",
     "scene": "sigiriya",
-    "src": "/images/themed-2k/regions/cultural-triangle.webp"
+    "src": "/images/cleaned/regions/cultural-triangle.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "4 to 5",
     "title": "Kandy",
     "scene": "kandy",
-    "src": "/images/themed-2k/cities/kandy.webp"
+    "src": "/images/cleaned/cities/kandy.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "6 to 7",
     "title": "Tea country",
     "scene": "tea-country",
-    "src": "/images/themed-2k/regions/hill-country.webp"
+    "src": "/images/cleaned/regions/hill-country.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "8 to 9",
     "title": "Yala",
     "scene": "yala",
-    "src": "/images/themed-2k/regions/yala.webp"
+    "src": "/images/cleaned/regions/yala.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "10 to 11",
     "title": "Galle and the south coast",
     "scene": "galle",
-    "src": "/images/themed-2k/regions/galle.webp"
+    "src": "/images/cleaned/regions/galle.webp"
   },
   {
     "journey": "sri-lanka-in-style",
     "day": "12",
     "title": "Departure",
     "scene": "colombo",
-    "src": "/images/themed-2k/cities/colombo.webp"
+    "src": "/images/cleaned/cities/colombo.webp"
   },
   {
     "journey": "kerala-slow-waters",
     "day": "1 to 2",
     "title": "Fort Kochi",
     "scene": "kochi",
-    "src": "/images/themed-2k/cities/kochi.webp"
+    "src": "/images/cleaned/cities/kochi.webp"
   },
   {
     "journey": "kerala-slow-waters",
     "day": "3 to 4",
     "title": "Munnar",
     "scene": "munnar",
-    "src": "/images/themed-2k/cities/munnar.webp"
+    "src": "/images/cleaned/cities/munnar.webp"
   },
   {
     "journey": "kerala-slow-waters",
     "day": "5 to 6",
     "title": "The backwaters",
     "scene": "kerala",
-    "src": "/images/themed-2k/regions/kerala.webp"
+    "src": "/images/cleaned/regions/kerala.webp"
   },
   {
     "journey": "kerala-slow-waters",
     "day": "7 to 8",
     "title": "Ayurveda by the sea",
     "scene": "kovalam",
-    "src": "/images/themed-2k/cities/kovalam.webp"
+    "src": "/images/cleaned/cities/kovalam.webp"
   },
   {
     "journey": "kerala-slow-waters",
     "day": "9",
     "title": "Departure",
     "scene": "thiruvananthapuram",
-    "src": "/images/themed-2k/cities/thiruvananthapuram.webp"
+    "src": "/images/cleaned/cities/thiruvananthapuram.webp"
   },
   {
     "journey": "nepal-in-private",
     "day": "1 to 3",
     "title": "Kathmandu Valley",
     "scene": "kathmandu",
-    "src": "/images/themed-2k/cities/kathmandu.webp"
+    "src": "/images/cleaned/cities/kathmandu.webp"
   },
   {
     "journey": "nepal-in-private",
     "day": "4 to 6",
     "title": "Pokhara",
     "scene": "pokhara",
-    "src": "/images/themed-2k/regions/pokhara.webp"
+    "src": "/images/cleaned/regions/pokhara.webp"
   },
   {
     "journey": "nepal-in-private",
     "day": "7 to 9",
     "title": "Chitwan",
     "scene": "chitwan",
-    "src": "/images/themed-2k/regions/chitwan.webp"
+    "src": "/images/cleaned/regions/chitwan.webp"
   },
   {
     "journey": "nepal-in-private",
     "day": "10",
     "title": "Departure",
     "scene": "kathmandu",
-    "src": "/images/themed-2k/cities/kathmandu.webp"
+    "src": "/images/cleaned/cities/kathmandu.webp"
   },
   {
     "journey": "bhutan-quiet-kingdom",
     "day": "1 to 2",
     "title": "Paro",
     "scene": "paro",
-    "src": "/images/themed-2k/cities/paro.webp"
+    "src": "/images/cleaned/cities/paro.webp"
   },
   {
     "journey": "bhutan-quiet-kingdom",
     "day": "3 to 4",
     "title": "Thimphu",
     "scene": "thimphu",
-    "src": "/images/themed-2k/regions/thimphu.webp"
+    "src": "/images/cleaned/regions/thimphu.webp"
   },
   {
     "journey": "bhutan-quiet-kingdom",
     "day": "5 to 7",
     "title": "Punakha",
     "scene": "punakha",
-    "src": "/images/themed-2k/regions/punakha.webp"
+    "src": "/images/cleaned/regions/punakha.webp"
   },
   {
     "journey": "bhutan-quiet-kingdom",
     "day": "8",
     "title": "Tiger's Nest",
     "scene": "tigers-nest",
-    "src": "/images/themed-2k/regions/paro.webp"
+    "src": "/images/cleaned/regions/paro.webp"
   },
   {
     "journey": "bhutan-quiet-kingdom",
     "day": "9",
     "title": "Departure",
     "scene": "paro",
-    "src": "/images/themed-2k/cities/paro.webp"
+    "src": "/images/cleaned/cities/paro.webp"
   },
   {
     "journey": "maldives-private-escape",
     "day": "1",
     "title": "Arrival by seaplane",
     "scene": "male",
-    "src": "/images/themed-2k/cities/male.webp"
+    "src": "/images/cleaned/cities/male.webp"
   },
   {
     "journey": "maldives-private-escape",
     "day": "2 to 6",
     "title": "Island time",
     "scene": "maldives",
-    "src": "/images/themed-2k/destinations/maldives.webp"
+    "src": "/images/cleaned/destinations/maldives.webp"
   },
   {
     "journey": "maldives-private-escape",
     "day": "7",
     "title": "Departure",
     "scene": "male",
-    "src": "/images/themed-2k/cities/male.webp"
+    "src": "/images/cleaned/cities/male.webp"
   }
 ]
