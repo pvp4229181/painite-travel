@@ -14,7 +14,7 @@ const countryOrder = ["india", "nepal", "bhutan", "sri-lanka", "maldives"];
 function heroVideo(destination) {
   if (destination.video) return videoSrc(destination.video);
   if (!countryOrder.includes(destination.slug)) return null;
-  return `/videos/hero/${destination.slug}.mp4?v=20261006-clean`;
+  return `/videos/hero/${destination.slug}.mp4?v=20261101-clean`;
 }
 
 export default function Hero({ destinations: suppliedDestinations = starterDestinations }) {

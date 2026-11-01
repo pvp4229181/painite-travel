@@ -69,7 +69,7 @@ export default async function DestinationPage({ params }) {
     <>
       <PageHero
         scene={d.scene}
-        video={d.video || (["india", "nepal", "bhutan", "sri-lanka", "maldives"].includes(d.slug) ? `/videos/hero/${d.slug}.mp4?v=20261006-clean` : undefined)}
+        video={d.video || (["india", "nepal", "bhutan", "sri-lanka", "maldives"].includes(d.slug) ? `/videos/hero/${d.slug}.mp4?v=20261101-clean` : undefined)}
         title={
           <>
             <span className="eyebrow mb-4 block text-ivory/80">Luxury private travel in</span>
