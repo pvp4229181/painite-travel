@@ -38,7 +38,7 @@ export default function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="container-luxe flex h-[72px] items-center justify-between">
+      <div className="container-luxe flex h-[96px] items-center justify-between">
         <Logo priority />
 
         <nav
@@ -133,7 +133,7 @@ export default function Header() {
           // fixed children, so bottom-0 would collapse this panel to the header's height.
           <motion.div
             id="mobile-menu"
-            className="fixed inset-x-0 top-[72px] h-[calc(100dvh-72px)] overflow-y-auto bg-ink lg:hidden"
+            className="fixed inset-x-0 top-[96px] h-[calc(100dvh-96px)] overflow-y-auto bg-ink lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

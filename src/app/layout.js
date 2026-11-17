@@ -9,6 +9,7 @@ import "./globals.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppLink from "@/components/layout/WhatsAppLink";
 import SiteOnly from "@/components/layout/SiteOnly";
 import JsonLd from "@/components/ui/JsonLd";
 import { site } from "@/data/site";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         <main id="main">{children}</main>
         <SiteOnly>
           <Footer />
+          <WhatsAppLink />
           <JsonLd data={organizationJsonLd()} />
         </SiteOnly>
       </body>

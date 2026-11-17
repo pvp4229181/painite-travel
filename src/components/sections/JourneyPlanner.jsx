@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Clock3, Mail, Phone, MessageCircle, Check } from "lucide-react";
 import EnquiryForm from "@/components/forms/EnquiryForm";
@@ -17,7 +17,7 @@ export default function JourneyPlanner({ destinations, experiences, defaultDesti
         <p className="planner-sidebar-intro">Your enquiry goes to a dedicated curator who knows our destinations first-hand. Share a few ideas, and we will shape the possibilities together.</p>
         <div className="planner-curator-photo"><Image quality={90} src="/images/cleaned/scenes/customer-enquiry.webp" alt="Maps, field notes and a camera ready for travel" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" /></div>
         <ol className="planner-next-steps">{[{title:"We listen",text:"Your curator replies personally within 24 hours."},{title:"We create",text:"A considered proposal, shaped around your interests."},{title:"We refine",text:"Together, we make the details feel right."}].map((step,i)=><li key={step.title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
-        <div className="planner-direct"><p className="eyebrow">PREFER TO SPEAK DIRECTLY?</p><a href={site.phoneHref}><Phone size={17} />{site.phone}<ArrowUpRight size={15} /></a><a href={`mailto:${site.email}`}><Mail size={17} />{site.email}<ArrowUpRight size={15} /></a><a href={`https://wa.me/${site.phoneHref.replace(/\D/g, "")}`} target="_blank" rel="noreferrer"><MessageCircle size={17} />Chat on WhatsApp<ArrowUpRight size={15} /></a></div>
+        <div className="planner-direct"><p className="eyebrow">PREFER TO SPEAK DIRECTLY?</p><a href={site.phoneHref}><Phone size={17} />{site.phone}<ArrowUpRight size={15} /></a><a href={`mailto:${site.email}`}><Mail size={17} />{site.email}<ArrowUpRight size={15} /></a><a href={site.whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={17} />Chat on WhatsApp<ArrowUpRight size={15} /></a></div>
       </aside>
       <section id="enquire" className="planner-form-panel" aria-labelledby="planner-form-title">
         <div className="planner-form-heading"><div className="planner-form-eyebrow"><p className="eyebrow text-terracotta">YOUR PRIVATE ENQUIRY</p><span><Clock3 size={14} />24-hour personal reply</span></div><h2 id="planner-form-title">Where would you love to go?</h2><p>A few details are enough to begin. Your name and email are the only essentials.</p></div>

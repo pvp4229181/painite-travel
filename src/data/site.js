@@ -10,6 +10,7 @@ export const site = {
   altEmail: "painitetravels@hotmail.com",
   phone: "+91 97189 75554",
   phoneHref: "tel:+919718975554",
+  whatsappHref: "https://wa.me/919718975554",
   address: "Agra, Uttar Pradesh, India",
   streetAddress: "Nai Abadi, Nagla Dheem, Post Dhandhupura, Tajganj, Kalal Kheria",
   postalCode: "282006",

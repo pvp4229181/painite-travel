@@ -2,17 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-// The Painite Travels logo (white lettering, for dark backgrounds), from painitetravels.com.
 export function LogoMark({ className, priority = false }) {
   return (
-    <Image quality={90}
-      src="/brand/logo-header.png"
-      alt="Painite Travels, Curator of Exceptional Journeys"
-      width={320}
-      height={114}
+    <span className="inline-flex flex-col items-center px-3 py-2">
+      <span className="relative -mb-2 block">
+      <Image quality={90}
+      src="/brand/painite-travels.png"
+      alt="Painite Travels"
+      width={400}
+      height={189}
+      sizes="220px"
       priority={priority}
-      className={cn("h-9 w-auto sm:h-11", className)}
+      className={cn("h-14 w-auto brightness-0 invert [clip-path:inset(0_0_14%_0)] sm:h-16", className)}
     />
+        <Image
+          src="/brand/painite-travels.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="220px"
+          quality={90}
+          priority={priority}
+          className="object-contain [clip-path:inset(0_0_36%_0)]"
+        />
+      </span>
+      <span className="whitespace-nowrap text-[9px] leading-4 font-medium tracking-[0.12em] text-white">THE RAREST WAY TO TRAVEL</span>
+    </span>
   );
 }
 

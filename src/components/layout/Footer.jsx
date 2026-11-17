@@ -18,10 +18,10 @@ const linkCls = "transition-colors hover:text-gold";
 export default async function Footer() {
   const [destinations, experiences] = await Promise.all([getDestinations(), getExperiences()]);
   return (
-    <footer className="bg-ink-deep text-ivory">
+    <footer className="bg-ink-deep pb-20 text-ivory">
       <div className="container-luxe grid gap-12 pt-16 pb-14 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         <div>
-          <Logo imageClassName="h-12 sm:h-14" />
+          <Logo imageClassName="h-20 sm:h-24" />
           <p className="mt-5 font-serif text-lg text-gold">{site.tagline}</p>
           <p className="mt-5 max-w-[16rem] text-[13px] leading-relaxed text-ivory/75">{site.description}</p>
         </div>
@@ -77,6 +77,11 @@ export default async function Footer() {
             </a>
           </li>
           <li>{site.address}</li>
+          <li>
+            <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" className={linkCls}>
+              Chat on WhatsApp
+            </a>
+          </li>
         </Column>
       </div>
 
